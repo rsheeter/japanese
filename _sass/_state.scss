@@ -20,12 +20,15 @@
 // This is used in the M+ section to override the looping JS
 // animation on hover (or, potentially, other pointer events).
 .is-pointer-ty0 {
+  transition: transform 1s ease-in-out;
+
   &:hover,
   &:focus {
-    .is-translated {
+    outline: 5px solid $purple;
+    .animate {
       // `!important` is okay on state classes, we really do want this to be true.
       // Stop cycling the animation when the visitor hovers.
-      transform: translateY(0%) !important;
+      animation-play-state: paused;
     }
   }
 }
