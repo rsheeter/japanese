@@ -1,22 +1,18 @@
 ---
-layout: none
+layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 <pre><code>Specimen layout
 Use: {{ page.font }}
 Path: {{ page.font | split: ' ' | join: '' | downcase }}
+author: {{ page.author }}
+author_data: {{ site.data.authors[page.author].name }}
 </code></pre>
 
   <header>
     <h1 itemprop="name headline">{{ page.title | escape }}</h1>
     <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-
-    <!-- Include graphic designer details here or in the footer? General credits might be less intrusive -->
-    <p>
-      {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}
-    </p>
   </header>
 
   <!-- Temp approach -->
@@ -25,6 +21,11 @@ Path: {{ page.font | split: ' ' | join: '' | downcase }}
     <div class="post-content" itemprop="articleBody">
       {{ content }}
     </div>
+
+    <!-- Include graphic designer details here or in the footer? General credits might be less intrusive -->
+    {% if page.author and site.data.authors[page.author] %}
+    <p>Specimen designed by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.data.authors[page.author].name }}</span></span></p>
+    {% endif %}
 
   </div>
 
