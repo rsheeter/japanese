@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "version": "",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "bundle install",
+    "start": "jekyll serve ./src",
+    "build": "jekyll build ./src"
+  }
+}
