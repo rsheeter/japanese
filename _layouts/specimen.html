@@ -5,15 +5,43 @@ layout: default
 
 <pre><code>Specimen layout
 Use: {{ page.font }}
+Path: {{ page.font | split: ' ' | join: '' | downcase }}
 </code></pre>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  <header>
+    <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+    <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+
+    <!-- Include graphic designer details here or in the footer? General credits might be less intrusive -->
+    <p>
+      {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+  <!-- Temp approach -->
+  <div style="font-family: '{{ page.font }}', sans-serif;">
+
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
   </div>
 
 </article>
+
+{% comment %}
+This takes the font family name and combines it into a single string, to complete the Google Fonts Early Access URL.
+It’s fairly specific to current conditions, and perhaps we should maintain a master list this is matched against
+instead. It might also be possible to get it from the API a different way. This works as a fallback for now: it
+illustrates that the template should take care of getting the font from Early Access so contributors don’t.
+
+If this is bad—if it’s important they should be doing it manually to have them working with Early Access—then there
+should be a clear example template to follow.
+{% endcomment %}
+
+<!-- Temp approach -->
+<link
+  href="http://fonts.googleapis.com/earlyaccess/{{ page.font | split: ' ' | join: '' | downcase }}.css"
+  rel="stylesheet"
+  async />
