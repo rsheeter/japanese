@@ -31,6 +31,8 @@ collections:
   specimens:
     output: false # No individual specimen pages
     permalink: /specimens/:path/
+    default:
+      layout: none
 
 # TODO Set default layout and other metadata
 # per https://jekyllrb.com/docs/collections/
