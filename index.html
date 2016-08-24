@@ -9,13 +9,14 @@ layout: default
   <ul class="post-list">
     {% for specimen in site.specimens %}
       <li>
-        {% comment %}
         <span class="post-meta">{{ specimen.date | date: "%b %-d, %Y" }}</span>
-        {% endcomment %}
 
         <h2>
-          <a class="post-link" href="{{ specimen.url | prepend: site.baseurl }}">{{ specimen.title | escape }}</a>
+          <a class="post-link" href="#{{ specimen.slug }}">{{ specimen.title | escape }}</a>
         </h2>
+
+        {{ specimen.content }}
+
       </li>
     {% endfor %}
   </ul>
