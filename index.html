@@ -2,25 +2,56 @@
 layout: default
 ---
 
-<div class="home">
+<div>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+  <h1 class="h1">Posts</h1>
+  <ul class="list-style-none m0">
     {% for specimen in site.specimens %}
-      <li>
-        <span class="post-meta">{{ specimen.date | date: "%b %-d, %Y" }}</span>
+      <li id="{{ specimen.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <h2>
-          <a class="post-link" href="#{{ specimen.slug }}">{{ specimen.title | escape }}</a>
-        </h2>
+<pre><code>Specimen layout
+Use: {{ specimen.font }}
+Path: {{ specimen.font | split: ' ' | join: '' | downcase }}
+author: {{ specimen.author }}
+author_data: {{ site.data.authors[specimen.author].name }}
+</code></pre>
 
-        {{ specimen.content }}
+          <header>
+            <h1 itemprop="name headline">{{ specimen.title | escape }}</h1>
+            <p><a href="#{{ specimen.slug }}"><time datetime="{{ specimen.date | date_to_xmlschema }}" itemprop="datePublished">{{ specimen.date | date: "%b %-d, %Y" }}</time></a></p>
+          </header>
 
+          <!-- Temp approach -->
+          <div style="font-family: '{{ specimen.font }}', sans-serif;">
+
+            <div class="post-content" itemprop="articleBody">
+              {{ specimen.content }}
+            </div>
+
+            <!-- Include graphic designer details here or in the footer? General credits might be less intrusive -->
+            {% if specimen.author and site.data.authors[specimen.author] %}
+            <p>Specimen designed by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.data.authors[specimen.author].name }}</span></span></p>
+            {% endif %}
+
+          </div>
       </li>
     {% endfor %}
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
+  {% comment %}
+  This takes the font family name and combines it into a single string, to complete the Google Fonts Early Access URL.
+  It’s fairly specific to current conditions, and perhaps we should maintain a master list this is matched against
+  instead. It might also be possible to get it from the API a different way. This works as a fallback for now: it
+  illustrates that the template should take care of getting the font from Early Access so contributors don’t.
+
+  If this is bad—if it’s important they should be doing it manually to have them working with Early Access—then there
+  should be a clear example template to follow.
+  {% endcomment %}
+  {% for specimen in site.specimens %}
+  <link href="http://fonts.googleapis.com/earlyaccess/{{ specimen.font | split: ' ' | join: '' | downcase }}.css" rel="stylesheet" async />
+  {% endfor %}
 
 </div>

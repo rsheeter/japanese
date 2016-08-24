@@ -7,13 +7,15 @@
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main aria-label="Content">
+      <div class="clearfix">
         {{ content }}
       </div>
     </main>
 
+    {% comment %}
     {% include footer.html %}
+    {% endcomment %}
 
   </body>
 
