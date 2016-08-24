@@ -25,6 +25,16 @@ url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# “Not everything is a post or a page.” Rather than use posts, these are the type
+# specimen sections.
+collections:
+  specimens:
+    output: true
+    permalink: /specimens/:path/
+
+# TODO Set default layout and other metadata
+# per https://jekyllrb.com/docs/collections/
+
 # Build settings
 markdown: kramdown
 # theme: ./

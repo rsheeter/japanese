@@ -7,12 +7,14 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for specimen in site.specimens %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% comment %}
+        <span class="post-meta">{{ specimen.date | date: "%b %-d, %Y" }}</span>
+        {% endcomment %}
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ specimen.url | prepend: site.baseurl }}">{{ specimen.title | escape }}</a>
         </h2>
       </li>
     {% endfor %}
