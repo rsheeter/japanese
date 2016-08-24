@@ -29,7 +29,7 @@ github_username:  jekyll
 # specimen sections.
 collections:
   specimens:
-    output: true
+    output: false # No individual specimen pages
     permalink: /specimens/:path/
 
 # TODO Set default layout and other metadata
