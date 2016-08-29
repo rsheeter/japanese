@@ -2,7 +2,9 @@
   "name": "",
   "version": "",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "basscss-sass": "4.0.0"
+  },
   "devDependencies": {},
   "scripts": {
     "postinstall": "bundle install",
