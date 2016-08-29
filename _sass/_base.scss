@@ -11,3 +11,14 @@ body {
   padding: 0;
   list-style: none;
 }
+
+// Normalize font weight
+// and font style
+h1, h2, h3, h4, h5, h6,
+b, strong {
+  font-weight: normal;
+}
+
+i, em, address {
+  font-style: normal;
+}
