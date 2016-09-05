@@ -19,22 +19,25 @@ layout: default
     </div>
   </div>
 
-  <h1 class="h1">Posts</h1>
   <ul class="list-style-none m0">
     {% for specimen in site.specimens %}
       <li id="{{ specimen.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 
+{% comment %}
 <pre><code>Specimen layout
 Use: {{ specimen.font }}
 Path: {{ specimen.font | split: ' ' | join: '' | downcase }}
 author: {{ specimen.author }}
 author_data: {{ site.data.authors[specimen.author].name }}
 </code></pre>
+{% endcomment %}
 
+          {% comment %}
           <header>
             <h1 itemprop="name headline">{{ specimen.title | escape }}</h1>
             <p><a href="#{{ specimen.slug }}"><time datetime="{{ specimen.date | date_to_xmlschema }}" itemprop="datePublished">{{ specimen.date | date: "%b %-d, %Y" }}</time></a></p>
           </header>
+          {% endcomment %}
 
           <!-- Temp approach -->
           <div style="font-family: '{{ specimen.font }}', sans-serif;">
@@ -44,9 +47,11 @@ author_data: {{ site.data.authors[specimen.author].name }}
             </div>
 
             <!-- Include graphic designer details here or in the footer? General credits might be less intrusive -->
+            {% comment %}
             {% if specimen.author and site.data.authors[specimen.author] %}
             <p>Specimen designed by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.data.authors[specimen.author].name }}</span></span></p>
             {% endif %}
+            {% endcomment %}
 
           </div>
       </li>
@@ -78,7 +83,7 @@ author_data: {{ site.data.authors[specimen.author].name }}
   it’s actually clearer later. Might be beter to just remove the
   Basscss colour partial and have a custom one with custom names that
   does the same thing.
-  {% endcomment %} 
+  {% endcomment %}
   <div class="clearfix bg-white">
     <div class="max-width-4 mx-auto py3">
       <div class="flex flex-wrap py1 mxn1">
