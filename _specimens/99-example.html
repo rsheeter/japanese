@@ -1,0 +1,21 @@
+---
+title: Example 1
+font: 'Noto Sans Japanese' # Pass in the `font-family` string, we’ll get it from Early Access for you
+# Should support multiple
+author: kennethormandy # Key for `_data/authors.json`
+---
+
+<div class="bg-olive black p2 py4">
+  <div class="mx-auto max-width-3">
+    <h2 class="h1">うつくしく、そしておそろしいあらしをみた。</h2>
+    <div class="h3">
+      <p>どうやらアトモスフェアの高い位置まで到達したようだった。空は真っ暗で、星の瞬きもなくなっていた。丘の上では彼方に広がる水平線が同じ高さに見えるのと同じ錯覚によって、眼下に真っ暗な雲が広がり、車は巨大な暗い空間の真ん中に浮いているように見えた。その空間の上半分は銀色にきらめいていた。</p>
+    </div>
+    <p>{{ site.data.authors[page.author].name | escape }}</p>
+  </div>
+</div>
+
+<!--
+殉情詩集 by Haruo Sato
+https://www.gutenberg.org/ebooks/38697
+-->

@@ -1,0 +1,27 @@
+---
+title: Hannari
+font: 'Hannari'
+font_local: true
+author: kennethormandy # Key for `_data/authors.json`
+---
+
+<div class="bg-red white p2 py4">
+  <div class="mx-auto max-width-3">
+    <div class="h1 wf-hannari writingmode-vertical">
+      <p>あかるく</p>
+      <p>やさしく</p>
+      <p>ふんわり</p> {% comment %} I removed punctuation marks here, is that correct? {% endcomment %}
+
+    </div>
+    <div class="h3 muted">
+      <p class="wf-hannari"><q>『明朝体は墨溜まりを意識してデザインしています。』</q></p>
+      <p><span>中井良尚</span>、 <span>はんなり明朝</span></p>
+    </div>
+    <p>{{ site.data.authors[page.author].name | escape }}</p>
+  </div>
+</div>
+
+<!--
+殉情詩集 by Haruo Sato
+https://www.gutenberg.org/ebooks/38697
+-->
