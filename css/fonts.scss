@@ -1,0 +1,38 @@
+---
+# Front-matter for Jekyll
+---
+
+// TODO Temporary font-loading file until typefaces are
+// available through Early Access
+@font-face {
+  font-family: 'Sawarabi Mincho';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/sawarabimincho/SawarabiMincho-Regular.ttf');
+}
+
+.wf-sawarabimincho {
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+@font-face {
+  font-family: 'Sawarabi Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/sawarabigothic/SawarabiGothic-Regular.otf');
+}
+
+.wf-sawarabigothic {
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Hannari';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/hannari/Hannari-Regular.otf')
+}
+
+.wf-hannari {
+  font-family: 'Hannari', script;
+}
