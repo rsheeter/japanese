@@ -22,3 +22,21 @@ b, strong {
 i, em, address {
   font-style: normal;
 }
+
+// Accessibility utilities
+.speak-none {
+  speak: none;
+}
+
+.speak-normal {
+  speak: normal;
+}
+
+// Writing Mode Language utilities
+.writingmode-vertical {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
