@@ -69,4 +69,34 @@ author_data: {{ site.data.authors[specimen.author].name }}
   <link href="http://fonts.googleapis.com/earlyaccess/{{ specimen.font | split: ' ' | join: '' | downcase }}.css" rel="stylesheet" async />
   {% endfor %}
 
+  {% comment %}
+  Save this section for the documentation / contributing
+  page. The colour names match to mrmrs/colors which is a
+  little clunky to remember for me, will re-evaulate whether
+  it’s actually clearer later. Might be beter to just remove the
+  Basscss colour partial and have a custom one with custom names that
+  does the same thing.
+  {% endcomment %} 
+  <div class="clearfix bg-white">
+    <div class="max-width-4 mx-auto py3">
+      <div class="flex flex-wrap py1 mxn1">
+        <div class="bg-purple col-2 mx1" style="height: 100px"></div>
+        <div class="bg-navy col-2 mx1" style="height: 100px"></div>
+        <div class="bg-maroon col-2 mx1" style="height: 100px"></div>
+      </div>
+      <div class="flex flex-wrap py1 mxn1">
+        <div class="bg-blue col-2 mx1" style="height: 100px"></div>
+        <div class="bg-olive col-2 mx1" style="height: 100px"></div>
+        <div class="bg-fuchsia col-2 mx1" style="height: 100px"></div>
+      </div>
+      <div class="flex flex-wrap py1 mxn1">
+        <div class="bg-red col-2 mx1" style="height: 100px"></div>
+        <div class="bg-yellow col-2 mx1" style="height: 100px"></div>
+        <div class="bg-green col-2 mx1" style="height: 100px"></div>
+        <div class="bg-black col-2 mx1" style="height: 100px"></div>
+        <div class="bg-aqua col-2 mx1" style="height: 100px"></div>
+      </div>
+    </div>
+  </div>
+
 </div>
