@@ -1,7 +1,9 @@
 <header role="banner">
   <div class="clearfix col-12">
   <nav class="max-width-4 mx-auto" role="navigation">
-    <a href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+    <a class="inline-block pt2" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+    <a class="inline-block pt2" href="{{ site.baseurl }}/about">About</a>
+    <a class="inline-block pt2" href="{{ site.baseurl }}/contributing">Contributing</a>
 
     <ul class="hide">
       {% for specimen in site.specimens %}

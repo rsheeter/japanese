@@ -28,6 +28,19 @@ blockquote {
   margin: 0;
 }
 
+// Anchors
+a {
+  color: $blue;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  &:hover {
+    color: darken($blue, 10%);
+  }
+  &:active {
+    color: darken($blue, 20%);
+  }
+}
+
 // Accessibility utilities
 .speak-none {
   speak: none;
