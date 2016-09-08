@@ -40,4 +40,8 @@ collections:
 
 # Build settings
 markdown: kramdown
+browserify:
+  exts: [".js"] # Target extensions
+  command: "browserify -" # Use Browserify in `node_modules`
+
 # theme: ./
