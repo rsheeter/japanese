@@ -3,3 +3,14 @@
 .bg-gradient-black-red {
   background-image: linear-gradient(to bottom, $black 75%, $red 95%);
 }
+
+.bg-gradient-red-white {
+  background-image: linear-gradient(to bottom, $red 0%, $white 100%);
+}
+
+
+// Responsive colors
+
+@media #{ $breakpoint-md } {
+  .md-white { color: $white }  
+}

@@ -38,10 +38,41 @@ blockquote {
 }
 
 // Writing Mode Language utilities
-.writingmode-vertical {
+.vertical {
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   -moz-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+}
+
+.upright {
+  // full-size-kana?
+  -webkit-text-transform: full-width;
+  text-transform: -webkit-full-width;
+  text-transform: full-width;
+
+  -webkit-text-orientation: upright;
+  -moz-text-orientation: upright;
+  -ms-text-orientation: upright;
+  text-orientation: upright;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+// Styles specific to the Hannari section
+.h0-hannari {
+  // Using vh instead of vw like normal
+  // Doesn’t seem like min font size is being respected
+  font-size: calc( 50px + (125 - 50) * ( (100vh - 400px) / ( 800 - 400) ));
+}
+
+.translate-hannari {
+  @media #{ $breakpoint-md } {
+    transform: translate(-50%, 50%);
+  }
 }
