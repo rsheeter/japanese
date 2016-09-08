@@ -96,6 +96,11 @@ a {
   }
 }
 
+// Styles specific to the Kokoro section
+.h0-kokoro {
+  font-size: calc( 32px + (48 - 32) * ( (100vw - 400px) / ( 800 - 400) ));
+}
+
 // From Utility OpenType
 .caps {
   text-transform: uppercase;
