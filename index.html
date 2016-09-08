@@ -71,7 +71,7 @@ author_data: {{ site.data.authors[specimen.author].name }}
   should be a clear example template to follow.
   {% endcomment %}
   {% for specimen in site.specimens %}
-  {% if font and font_local !== true %}
+  {% if font and font_local != true %}
     <link href="http://fonts.googleapis.com/earlyaccess/{{ specimen.font | split: ' ' | join: '' | downcase }}.css" rel="stylesheet" async />
   {% endif %}
   {% endfor %}
