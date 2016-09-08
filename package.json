@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "basscss-sass": "4.0.0",
+    "big-ideas-text": "0.4.1",
+    "fitter-happier-text": "0.0.7",
     "normalize.css": "4.2.0"
   },
   "devDependencies": {
