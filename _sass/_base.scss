@@ -90,6 +90,20 @@ a {
   display: inline-block;
 }
 
+// Largest responsive header
+.h0 {
+  font-size: $h1 * 1.5;
+  @media #{ $breakpoint-sm } {
+    font-size: $h1 * 2;
+  }
+  @media #{ $breakpoint-md } {
+    font-size: $h1 * 2.5;
+  }
+  @media #{ $breakpoint-lg } {
+    font-size: $h1 * 3.25;
+  }
+}
+
 // Styles specific to the Hannari section
 .h0-hannari {
   // Using vh instead of vw like normal
