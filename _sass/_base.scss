@@ -30,6 +30,12 @@ blockquote {
   margin: 0;
 }
 
+// Code blocks
+pre > code {
+  display: block;
+  font-family: $font-monospace;
+}
+
 abbr {
   text-decoration: none;
   border: none;
