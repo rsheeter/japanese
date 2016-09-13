@@ -139,3 +139,43 @@ a {
 .bs-label {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
+
+// Pre
+//
+// Check if this is already a class in Basscss or there’s an alternative.
+//
+// Styleguide: base.pre
+.pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+}
+
+
+// Overflow-x and -y
+//
+// Additional Basscss-like utilities for overflow
+// on specific axis.
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
