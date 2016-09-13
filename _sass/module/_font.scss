@@ -19,7 +19,7 @@
 // No styleguide reference.
 @for $i from 1 through 9 {
   .font-weight-#{ $i }00 {
-    font-weight: #{ $i }00;
+    font-weight: #{ $i * 100 };
   }
 }
 
@@ -75,4 +75,26 @@
   .lg-h4 { font-size: $h4; }
   .lg-h5 { font-size: $h5; }
   .lg-h6 { font-size: $h6; }
+}
+
+
+// Line height
+//
+// Utility classes for specific `line-height` options.
+//
+// No styleguide refernece.
+.line-height-1 {
+  line-height: $line-height-1;
+}
+
+.line-height-2 {
+  line-height: $line-height-2;
+}
+
+.line-height-3 {
+  line-height: $line-height-3;
+}
+
+.line-height-4 {
+  line-height: $line-height-4;
 }
