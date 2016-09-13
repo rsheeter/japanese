@@ -3,6 +3,7 @@
   "version": "",
   "private": true,
   "dependencies": {
+    "@googlefonts/badge": "git+https://github.com/kennethormandy/googlefonts-badge.git#v0.3.0",
     "basscss-sass": "4.0.0",
     "big-ideas-text": "0.4.1",
     "fitter-happier-text": "0.0.7",
