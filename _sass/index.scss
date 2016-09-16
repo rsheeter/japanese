@@ -15,6 +15,12 @@ $caps-letter-spacing: 0;
 
 $font-monospace: "Noto Mono", "Source Code Pro", "Fira Mono", monospace, monospace;
 
+// Custom breakpoints
+// @custom-media --breakpoint-xs (max-width: 40em);
+$breakheight-xs: "(max-height: 40em)";
+// @custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
+// @custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
+// @custom-media --breakpoint-lg (min-width: 64em);
 
 // Dependencies
 @import "../node_modules/normalize.css/normalize";

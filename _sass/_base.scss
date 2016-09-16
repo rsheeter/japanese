@@ -108,8 +108,27 @@ a {
 .h0-hannari {
   // Using vh instead of vw like normal
   // Doesn’t seem like min font size is being respected
-  font-size: calc( 50px + (125 - 50) * ( (100vh - 400px) / ( 800 - 400) ));
+  // @media #{ $breakheight-xs } {
+  //   font-size: $h2;
+  // }
+
+  // font-size: $h1;
+  // font-size: calc( 24px + (150 - 24) * ( (100vh - 320px) / ( 950 - 320) ));
+  font-size: $h1 * 2;
+  @media #{ $breakpoint-sm } {
+    font-size: calc( 24px + (150 - 24) * ( (100vh - 320px) / ( 950 - 320) ));
+  }
+
 }
+
+// @media #{ $breakpoint-xs } {
+//   .h0-hannari {
+//     // font-size: $h1;
+//     font-size: calc( 24px + (125 - 24) * ( (100vh - 300) / ( 800 - 400) ));
+//     outline: 2px solid green;
+//   }
+// }
+
 
 .translate-hannari {
   @media #{ $breakpoint-md } {

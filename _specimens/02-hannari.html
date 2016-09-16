@@ -10,14 +10,26 @@ author: kennethormandy # Key for `_data/authors.json`
     <div class="col-12 h1 wf-hannari">
       <div class="flex flex-wrap">
       <div class="col-12 md-col-9">
-        <div class="h0-hannari center mx-auto vertical" style="height: 80vh;">
+        <div class="flex flex-wrap items-stretch justify-around h0-hannari">
+          {% comment %} Wrapper div for `flex` and `vertical` in Firefox {% endcomment %}
+          <div><span class="vertical upright center">あかるく、</span></div>
+          <div><span class="vertical upright center">やさしく、</span></div>
+          <div><span class="vertical upright center">ふんわり。</span></div>
+
+        </div>
+
+      </div>
+      {% comment %}
+      <div class="col-12 md-col-9">
+        <div class="h0-hannari col-12 center mx-auto vertical" style="min-height: 80vh;">
           <div>あかるく、</div>
           <div>やさしく、</div>
-          <div>ふんわり。</div> {% comment %} I removed punctuation marks here, is that correct? {% endcomment %}
+          <div>ふんわり。</div>
         </div>
       </div>
+      {% endcomment %}
       <div class="col-12 md-col-3 red md-white">
-        <div class="translate-hannari">
+        <div class="">
           <div class="h3">
             <blockquote class="wf-hannari"><p>『明朝体は墨溜まりを意識してデザインしています。』</p></blockquote>
             <p class="ml4"><span>中井良尚</span>、 <span>はんなり明朝</span></p>
