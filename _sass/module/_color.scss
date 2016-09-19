@@ -8,9 +8,13 @@
   background-image: linear-gradient(to bottom, $red 0%, $white 100%);
 }
 
+.bg-gradient-darkred-red {
+  background-image: linear-gradient(to bottom, mix($red, $navy, 75%) 0%, $red 100%);
+}
+
 
 // Responsive colors
 
 @media #{ $breakpoint-md } {
-  .md-white { color: $white }  
+  .md-white { color: $white }
 }

@@ -17,10 +17,18 @@ $font-monospace: "Noto Mono", "Source Code Pro", "Fira Mono", monospace, monospa
 
 // Custom breakpoints
 // @custom-media --breakpoint-xs (max-width: 40em);
-$breakheight-xs: "(max-height: 40em)";
+$breakpoint-xs: "(max-width: 40em)";
 // @custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
+$breakpoint-sm: "(min-width: 40em)";
+$breakpoint-sm-md: "(min-width: 40em) and (max-width: 52em)";
 // @custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
+$breakpoint-md: "(min-width: 52em)";
+$breakpoint-md-lg: "(min-width: 52em) and (max-width: 64em)";
 // @custom-media --breakpoint-lg (min-width: 64em);
+$breakpoint-lg: "(min-width: 64em)";
+
+// Breakheights, for vertical Media Queries
+$breakheight-xs: "(max-height: 40em)";
 
 // Dependencies
 @import "../node_modules/normalize.css/normalize";

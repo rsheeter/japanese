@@ -94,13 +94,13 @@ a {
 .h0 {
   font-size: $h1 * 1.5;
   @media #{ $breakpoint-sm } {
-    font-size: $h1 * 2;
+    font-size: $h1 * 3.25;
   }
   @media #{ $breakpoint-md } {
-    font-size: $h1 * 2.5;
+    font-size: $h1 * 3.75;
   }
   @media #{ $breakpoint-lg } {
-    font-size: $h1 * 3.25;
+    font-size: $h1 * 4;
   }
 }
 
@@ -198,3 +198,59 @@ a {
 .overflow-hidden {
   overflow: hidden;
 }
+
+// Buttons
+.button-raised {
+  padding: $space-2 $space-3;
+  background: $yellow;
+  border-radius: $border-radius;
+  box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 25%),
+              $space-1*0.4 $space-1*0.4 mix($red, $yellow, 28%),
+              $space-1*0.6 $space-1*0.6 mix($red, $yellow, 31%),
+              $space-1*0.8 $space-1*0.8 mix($red, $yellow, 34%),
+              $space-1*1.0 $space-1*1.0 mix($red, $yellow, 37%);
+  border: none;
+  display: inline-block;
+  color: $black;
+  text-shadow: 0 0 1px mix($red, $yellow, 33%);
+  user-select: none;
+  &:hover,
+  // &:visited,
+  &:focus, {
+    color: $black;
+    transform: translate($space-1*0.4, $space-1*0.4);
+    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 31%),
+                $space-1*0.4 $space-1*0.4 mix($red, $yellow, 34%),
+                $space-1*0.6 $space-1*0.6 mix($red, $yellow, 37%),
+  }
+  &:active {
+    color: $black;
+    transform: translate($space-1*0.8, $space-1*0.8);
+    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 37%);
+  }
+
+}
+
+// Responsive positioning utilites
+//
+// No styleguide reference.
+@media #{ $breakpoint-sm } {
+  .sm-absolute { position: absolute }
+  .sm-relative { position: relative }
+}
+
+@media #{ $breakpoint-md } {
+  .md-absolute { position: absolute }
+  .md-relative { position: relative }
+}
+
+@media #{ $breakpoint-lg } {
+  .lg-absolute { position: absolute }
+  .lg-relative { position: relative }
+}
+
+// Additional `.muted` utilities
+//
+// No styleguide reference.
+.muted-light { opacity: 0.25; }
+.muted-dark { opacity: 0.75; }
