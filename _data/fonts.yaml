@@ -1,18 +1,18 @@
 ---
-# example:
-#   name:
-#     ja: ちょめちょめ
-#     en: Example
-#   designer:
-#     url: http://example.com
-#     name:
-#       ja: やまだ たろう
-#       en: Jane Smith
-#     quote:
-#       ja: なんとかなんとか
-#       en: Something about the typeface
+example:
+  name:
+    ja: ちょめちょめ
+    en: Example
+  designer:
+    url: http://example.com
+    name:
+      ja: やまだ たろう
+      en: Jane Smith
+    quote:
+      ja: なんとかなんとか
+      en: Something about the typeface
 
-- sawarabi:
+sawarabi:
   name:
     ja: さわらび明朝とさわらびゴシック
     en: Sawarabi Mincho & Gothic
@@ -25,13 +25,13 @@
       ja: 本文用のフォントとして使いやすくなるようにイメージしています。
       en: Designed and optimised as text type.
 
-- sawarabimincho:
+sawarabimincho:
   feature_nav: true
   name:
     ja: さわらび明朝
     en: Sawarabi Mincho
 
-- hannari:
+hannari:
   feature_nav: true
   name:
     ja: はんなり明朝
@@ -45,7 +45,7 @@
       ja: 明朝体は墨溜まりを意識してデザインしています。
       en: This Mincho style keeps and includes the visual impression of ink spots.
 
-- kokoro:
+kokoro:
   feature_nav: true
   name:
     ja: こころ明朝
@@ -59,7 +59,7 @@
       ja: 少しほっそりとした、角丸な明朝体です。まろやかで、軽い感じがする文字です。
       en: A slim Mincho face with rounded endings. The characters look smooth and light.
 
-- nikomojiplus:
+nikomojiplus:
   feature_nav: true
   name:
     ja: ニコもじ＋ # ニコモジ＋
@@ -73,7 +73,7 @@
       ja: すこしでもデザインのてだすけになれればさいわいです。
       en: I hope to do a cotribution to designers with this typeface.
 
-- nikukyu:
+nikukyu:
   feature_nav: true
   name:
     ja: ニクキュウ
@@ -87,13 +87,13 @@
       ja: モリっとして、ツヤのあるカタカナフォントです。
       en: false
 
-- sawarabigothic:
+sawarabigothic:
   feature_nav: true
   name:
     ja: さわらびゴシック
     en: Sawarabi Gothic
 
-- notocjk:
+notocjk:
   feature_nav: true
   name:
     ja: Noto Sans Japanese
@@ -110,29 +110,29 @@
 
 # Incomplete
 
-# - harenosora:
-#   name:
-#     ja: はれのそら明朝
-#     en: Harenosora Mincho
-#   designer:
-#     url: false
-#     name:
-#       ja: はれのそら明朝
-#       en: Yoshihisa Nakai
-#     quote:
-#       ja: 誰でも、気軽に使ってほしいです。
-#       en: I hope people will enjoy using this typeface.
+harenosora:
+  name:
+    ja: はれのそら明朝
+    en: Harenosora Mincho
+  designer:
+    url: false
+    name:
+      ja: はれのそら明朝
+      en: Yoshihisa Nakai
+    quote:
+      ja: 誰でも、気軽に使ってほしいです。
+      en: I hope people will enjoy using this typeface.
 
-# - keifont:
-#   name:
-#     ja: けいふぉんと
-#     en: Kei Font
-#   designer:
-#     name:
-#       ja: 中井良尚
-#       en: Nakai Yoshihisa
+keifont:
+  name:
+    ja: けいふぉんと
+    en: Kei Font
+  designer:
+    name:
+      ja: 中井良尚
+      en: Nakai Yoshihisa
 
-# - bokutachino:
-#   name:
-#     ja: ぼくたちのゴシック２
-#     en: Bokutachi No. 2 Gothic 2
+bokutachino:
+  name:
+    ja: ぼくたちのゴシック２
+    en: Bokutachi No. 2 Gothic 2
