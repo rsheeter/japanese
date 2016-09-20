@@ -131,25 +131,6 @@ a,
 //   }
 // }
 
-
-.translate-hannari {
-  @media #{ $breakpoint-md } {
-    transform: translate(-50%, 50%);
-  }
-}
-
-.translate-banner-1 {
-  @media #{ $breakpoint-sm } {
-    transform: translateY($space-3);
-  }
-}
-
-.translate-banner-2 {
-  @media #{ $breakpoint-sm } {
-    transform: translateY(-1 * $space-3);
-  }
-}
-
 // Styles specific to the Kokoro section
 .h0-kokoro {
   font-size: calc( 32px + (48 - 32) * ( (100vw - 400px) / ( 800 - 400) ));

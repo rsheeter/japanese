@@ -33,6 +33,15 @@ $breakpoint-lg: "(min-width: 64em)";
 // Breakheights, for vertical Media Queries
 $breakheight-xs: "(max-height: 40em)";
 
+// Basscss type scale
+$h6: 0.66rem;
+$h5: 0.875rem;
+$h4: 1rem;
+$h3: 1.25rem;
+$h2: 1.5rem;
+$h1: 2rem;
+
+
 // Dependencies
 @import "../node_modules/normalize.css/normalize";
 @import "../node_modules/basscss-sass/scss/basscss";
@@ -62,9 +71,10 @@ $breakheight-xs: "(max-height: 40em)";
 @import "base";
 @import "layout";
 @import "module/button";
-@import "module/syntax-highlighting";
+@import "module/translate";
 @import "module/color";
 @import "module/font";
+@import "module/syntax-highlighting";
 @import "state";
 // @import "theme";
 // @import "shame";
