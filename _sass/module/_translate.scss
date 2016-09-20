@@ -32,6 +32,14 @@
 
 }
 
+@media #{ $breakpoint-sm } {
+  .translate-banner > :nth-child(2) { transform: translateX($space-4); }
+  .translate-banner > :nth-child(3) { transform: translateY($space-3); }
+  .translate-banner > :nth-child(6) { transform: translateY($space-4); }
+  .translate-banner > :nth-child(7) { transform: translateY(-1 * $space-3); }
+  .translate-banner > :nth-child(8) { transform: translateY(-1 * $space-2); }
+}
+
 // Specific translation classes
 .translate-hannari {
   @media #{ $breakpoint-md } {

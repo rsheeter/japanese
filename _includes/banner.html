@@ -7,15 +7,24 @@
     </h1>
   </div>
 
-  {% comment %}
-  <ul>
-    {% for specimen in site.specimens %}
-      <li><a href="{{ specimen.slug }}">{{ specimen.title }}</a></li>
-    {% endfor %}
-  </ul>
-  {% endcomment %}
-
   <div class="mx-auto max-width-5 sm-absolute top-0">
+    <ul class="m0 p0 list-style-none flex flex-wrap translate-banner">
+      {% for font in site.data.fonts %}
+        {% if font.feature_nav %}
+          <li class="col-6 sm-col-4">
+            <div class="center p2 sm-p3 md-p4">
+              {% comment %} TODO hash links should come from object key {% endcomment %}
+              <a class="button-raised px3 py2 sm-px2 md-px3 z1 h5 sm-h6 md-h5 relative left-align" href="#{{ font.name.en | split: ' ' | join: '' | downcase }}">
+                <span>{{ font.name.ja }}</span>
+                <span lang="en" class="block muted">{{ font.name.en }}</span>
+              </a>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% comment %}
     <ul class="m0 p0 list-style-none flex flex-wrap">
       <li class="col-6 sm-col-4">
         <div class="center p2 sm-p3 md-p4">
@@ -63,6 +72,7 @@
         </div>
       </li>
     </ul>
+    {% endcomment %}
   </div>
 
   <div class="mx-auto max-width-4 white line-height-4 border-top border-white pt1 mt4">
