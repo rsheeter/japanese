@@ -14,7 +14,7 @@
 
 sawarabi:
   name:
-    ja: さわらび明朝
+    ja: さわらび明朝とさわらびゴシック
     en: Sawarabi Mincho & Gothic
   designer:
     url: false
@@ -24,6 +24,16 @@ sawarabi:
     quote:
       ja: 本文用のフォントとして使いやすくなるようにイメージしています。
       en: Designed and optimised as text type.
+
+sawarabimincho:
+  name:
+    ja: さわらび明朝
+    en: Sawarabi Mincho
+
+sawarabigothic:
+  name:
+    ja: さわらびゴシック
+    en: Sawarabi Gothic
 
 harenosora:
   name:
@@ -38,6 +48,18 @@ harenosora:
       ja: 誰でも、気軽に使ってほしいです。
       en: I hope people will enjoy using this typeface.
 
+hannari:
+  name:
+    ja: はんなり明朝
+    en: Hannari Mincho
+  designer:
+    url: false
+    name:
+      ja: 中井良尚
+      en: Yoshihisa Nakai
+    quote:
+      ja: 明朝体は墨溜まりを意識してデザインしています。
+      en: This Mincho style keeps and includes the visual impression of ink spots.
 
 kokoro:
   name:
@@ -52,33 +74,22 @@ kokoro:
       ja: 少しほっそりとした、角丸な明朝体です。まろやかで、軽い感じがする文字です。
       en: A slim Mincho face with rounded endings. The characters look smooth and light.
 
-hannari:
+nikomojiplus:
   name:
-    ja: はんなり明朝
-    en: Hannari Mincho
+    ja: ニコもじ＋ # ニコモジ＋
+    en: Nico Moji+
   designer:
     url: false
     name:
-      ja: 中井良尚
-      en: Yoshihisa Nakai
+      ja: Ku-ku (Do-Font)
+      en: Ku-ku (Do-Font)
     quote:
-      ja: 明朝体は墨溜まりを意識してデザインしています。
-      en: This Mincho style keeps and includes the visual impression of ink spots.
-
-notosansjp:
-  name: Noto Sans JP
-  designer:
-    url: "#"
-    name:
-      ja: 西塚涼子
-      en: Ryoko Nishizuka
-    quote:
-      ja: false
-      en: Noto fonts are intended to be visually harmonious across multiple languages, with compatible heights and stroke thicknesses.
+      ja: すこしでもデザインのてだすけになれればさいわいです。
+      en: I hope to do a cotribution to designers with this typeface.
 
 nikukyu:
   name:
-    ja: " ニクキュウ"
+    ja: ニクキュウ
     en: Nikukyu
   designer:
     url: false
@@ -89,18 +100,17 @@ nikukyu:
       ja: モリっとして、ツヤのあるカタカナフォントです。
       en: false
 
-nikomojiplus:
-  name:
-    ja: ニコもじ+
-    en: Nico Moji+
+notocjk:
+  name: Noto Sans JP
   designer:
-    url: false
+    url: "#"
     name:
-      ja: Ku-ku (Do-Font)
-      en: Ku-ku (Do-Font)
+      ja: 西塚涼子
+      en: Ryoko Nishizuka
     quote:
-      ja: すこしでもデザインのてだすけになれればさいわいです。
-      en: I hope to do a cotribution to designers with this typeface.
+      ja: false
+      en: Noto fonts are intended to be visually harmonious across multiple languages, with compatible heights and stroke thicknesses.
+
 
 # Incomplete
 
