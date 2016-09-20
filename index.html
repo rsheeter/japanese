@@ -8,7 +8,7 @@ layout: default
 
   <ul class="list-style-none m0">
     {% for specimen in site.specimens %}
-      <li id="{{ specimen.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
+      <li id="{{ specimen.slug | slice: 3, 500 }}" itemscope itemtype="http://schema.org/BlogPosting">
 
 {% comment %}
 <pre><code>Specimen layout

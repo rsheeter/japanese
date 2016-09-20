@@ -5,6 +5,7 @@
 var bigIdeasText = require('big-ideas-text')
 var fitterHappierText = require('fitter-happier-text')
 var googleFontsBadge = require('@googlefonts/badge')
+var smoothScroll = require('smoothscroll')
 
 if (document) {
   var elsBigIdeasText = document.getElementsByClassName('js-bigIdeasText')
@@ -21,5 +22,7 @@ if (document) {
         googleFontsBadge()
       }
     }
+
+    smoothScroll()
   }
 }
