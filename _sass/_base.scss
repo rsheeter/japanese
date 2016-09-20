@@ -1,10 +1,13 @@
 // Base
 
 body {
-  background: $white;
-  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
-  line-height: 1.5;
-  font-size: $h5;
+  font-family: $font-family-base;
+}
+
+@each $prefix in "::-moz-selection", "::selection" {
+  #{$prefix} {
+    background: rbga($purple, 0.5);
+  }
 }
 
 .list-style-none,
@@ -43,14 +46,14 @@ abbr {
 
 // Anchors
 a {
-  color: $blue;
+  color: $navy;
   text-decoration: none;
   border-bottom: 1px solid;
   &:hover {
-    color: darken($blue, 10%);
+    color: darken($navy, 5%);
   }
   &:active {
-    color: darken($blue, 20%);
+    color: darken($navy, 10%);
   }
 }
 
@@ -136,6 +139,18 @@ a {
   }
 }
 
+.translate-banner-1 {
+  @media #{ $breakpoint-sm } {
+    transform: translateY($space-3);
+  }
+}
+
+.translate-banner-2 {
+  @media #{ $breakpoint-sm } {
+    transform: translateY(-1 * $space-3);
+  }
+}
+
 // Styles specific to the Kokoro section
 .h0-kokoro {
   font-size: calc( 32px + (48 - 32) * ( (100vw - 400px) / ( 800 - 400) ));
@@ -199,38 +214,6 @@ a {
   overflow: hidden;
 }
 
-// Buttons
-.button-raised {
-  padding: $space-2 $space-3;
-  background: $yellow;
-  border-radius: $border-radius;
-  box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 25%),
-              $space-1*0.4 $space-1*0.4 mix($red, $yellow, 28%),
-              $space-1*0.6 $space-1*0.6 mix($red, $yellow, 31%),
-              $space-1*0.8 $space-1*0.8 mix($red, $yellow, 34%),
-              $space-1*1.0 $space-1*1.0 mix($red, $yellow, 37%);
-  border: none;
-  display: inline-block;
-  color: $black;
-  text-shadow: 0 0 1px mix($red, $yellow, 33%);
-  user-select: none;
-  &:hover,
-  // &:visited,
-  &:focus, {
-    color: $black;
-    transform: translate($space-1*0.4, $space-1*0.4);
-    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 31%),
-                $space-1*0.4 $space-1*0.4 mix($red, $yellow, 34%),
-                $space-1*0.6 $space-1*0.6 mix($red, $yellow, 37%),
-  }
-  &:active {
-    color: $black;
-    transform: translate($space-1*0.8, $space-1*0.8);
-    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 37%);
-  }
-
-}
-
 // Responsive positioning utilites
 //
 // No styleguide reference.
@@ -254,3 +237,17 @@ a {
 // No styleguide reference.
 .muted-light { opacity: 0.25; }
 .muted-dark { opacity: 0.75; }
+
+.text-indent {
+  text-indent: $space-3;
+}
+
+// Additional `max-width` utilities
+@media #{ $breakpoint-md } {
+  .md-max-width-1 { max-width: $width-1 }
+  .md-max-width-2 { max-width: $width-2 }
+  .md-max-width-3 { max-width: $width-3 }
+  .md-max-width-4 { max-width: $width-4 }
+}
+
+.max-width-5 { max-width: $width-4 * 1.5 }

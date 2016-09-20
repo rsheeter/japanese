@@ -1,0 +1,43 @@
+// Buttons
+//
+// Custom button styles.
+//
+// Markup:
+// <button class="button-raised">Download</button>
+//
+// No styleguide reference.
+.button-raised {
+  padding: $space-2 $space-3;
+  background: $yellow;
+  border-radius: $border-radius;
+  box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 25%),
+              $space-1*0.4 $space-1*0.4 mix($red, $yellow, 28%),
+              $space-1*0.6 $space-1*0.6 mix($red, $yellow, 31%),
+              $space-1*0.8 $space-1*0.8 mix($red, $yellow, 34%),
+              $space-1*1.0 $space-1*1.0 mix($red, $yellow, 37%);
+  border: none;
+  display: inline-block;
+  color: $black;
+  text-shadow: 0 0 1px mix($red, $yellow, 33%);
+  user-select: none;
+  &:hover,
+  // &:visited,
+  &:focus, {
+    color: $black;
+    transform: translate($space-1*0.4, $space-1*0.4);
+    outline: none;
+    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 31%),
+                $space-1*0.4 $space-1*0.4 mix($red, $yellow, 34%),
+                $space-1*0.6 $space-1*0.6 mix($red, $yellow, 37%);
+  }
+  &:focus {
+    outline: $space-1*0.2 solid $maroon;
+  }
+  &:active {
+    color: $black;
+    transform: translate($space-1*0.6, $space-1*0.6);
+    box-shadow: $space-1*0.2 $space-1*0.2 mix($red, $yellow, 34%),
+                $space-1*0.4 $space-1*0.4 mix($red, $yellow, 37%);
+  }
+
+}
