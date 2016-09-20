@@ -48,8 +48,8 @@ $breakheight-xs: "(max-height: 40em)";
 @import "../node_modules/basscss-sass/scss/background-colors";
 @import "../node_modules/basscss-sass/scss/background-images";
 @import "../node_modules/basscss-sass/scss/border-colors";
-// @import "../node_modules/basscss-sass/scss/darken";
-// @import "../node_modules/basscss-sass/scss/lighten";
+@import "../node_modules/basscss-sass/scss/darken";
+@import "../node_modules/basscss-sass/scss/lighten";
 // @import "../node_modules/basscss-sass/scss/input-range";
 // @import "../node_modules/basscss-sass/scss/progress";
 // @import "../node_modules/basscss-sass/scss/all";
@@ -61,6 +61,7 @@ $breakheight-xs: "(max-height: 40em)";
 // Import partials.
 @import "base";
 @import "layout";
+@import "module/button";
 @import "module/syntax-highlighting";
 @import "module/color";
 @import "module/font";
