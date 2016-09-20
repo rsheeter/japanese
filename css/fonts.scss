@@ -56,3 +56,14 @@
   font-weight: normal;
   src: url('/fonts/noto/NotoMono-Regular.ttf')
 }
+
+@font-face {
+  font-family: 'Nico Moji';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/nicomoji/nicomoji-plus_1.02.ttf')
+}
+
+.wf-nicomoji {
+  font-family: 'Nico Moji', sans-serif;
+}
