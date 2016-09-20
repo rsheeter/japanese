@@ -1,0 +1,119 @@
+---
+# example:
+#   name:
+#     ja: ちょめちょめ
+#     en: Example
+#   designer:
+#     url: http://example.com
+#     name:
+#       ja: やまだ たろう
+#       en: Jane Smith
+#     quote:
+#       ja: なんとかなんとか
+#       en: Something about the typeface
+
+sawarabi:
+  name:
+    ja: さわらび明朝
+    en: Sawarabi Mincho & Gothic
+  designer:
+    url: false
+    name:
+      ja: mishio
+      en: mishio
+    quote:
+      ja: 本文用のフォントとして使いやすくなるようにイメージしています。
+      en: Designed and optimised as text type.
+
+harenosora:
+  name:
+    ja: はれのそら明朝
+    en: Harenosora Mincho
+  designer:
+    url: false
+    name:
+      ja: はれのそら明朝
+      en: Yoshihisa Nakai
+    quote:
+      ja: 誰でも、気軽に使ってほしいです。
+      en: I hope people will enjoy using this typeface.
+
+
+kokoro:
+  name:
+    ja: こころ明朝
+    en: Kokoro Mincho
+  designer:
+    url: false
+    name:
+      ja: 中井良尚
+      en: Yoshihisa Nakai
+    quote:
+      ja: 少しほっそりとした、角丸な明朝体です。まろやかで、軽い感じがする文字です。
+      en: A slim Mincho face with rounded endings. The characters look smooth and light.
+
+hannari:
+  name:
+    ja: はんなり明朝
+    en: Hannari Mincho
+  designer:
+    url: false
+    name:
+      ja: 中井良尚
+      en: Yoshihisa Nakai
+    quote:
+      ja: 明朝体は墨溜まりを意識してデザインしています。
+      en: This Mincho style keeps and includes the visual impression of ink spots.
+
+notosansjp:
+  name: Noto Sans JP
+  designer:
+    url: "#"
+    name:
+      ja: 西塚涼子
+      en: Ryoko Nishizuka
+    quote:
+      ja: false
+      en: Noto fonts are intended to be visually harmonious across multiple languages, with compatible heights and stroke thicknesses.
+
+nikukyu:
+  name:
+    ja: " ニクキュウ"
+    en: Nikukyu
+  designer:
+    url: false
+    name:
+      ja: 中井良尚
+      en: false
+    quote:
+      ja: モリっとして、ツヤのあるカタカナフォントです。
+      en: false
+
+nikomojiplus:
+  name:
+    ja: ニコもじ+
+    en: Nico Moji+
+  designer:
+    url: false
+    name:
+      ja: Ku-ku (Do-Font)
+      en: Ku-ku (Do-Font)
+    quote:
+      ja: すこしでもデザインのてだすけになれればさいわいです。
+      en: I hope to do a cotribution to designers with this typeface.
+
+# Incomplete
+
+keifont:
+  name:
+    ja: けいふぉんと
+    en: Kei Font
+  designer:
+    name:
+      ja: 中井良尚
+      en: Nakai Yoshihisa
+
+bokutachino:
+  name:
+    ja: ぼくたちのゴシック２
+    en: Bokutachi No. 2 Gothic 2
