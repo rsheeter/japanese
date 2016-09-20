@@ -22,5 +22,5 @@ gem "jekyll", "3.2.1"
 group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"
   gem "jekyll-browserify", "1.1.1"
-  gem "octopress-autoprefixer", "2.0.0"
+  gem "jekyll-autoprefixer"
 end

@@ -43,5 +43,10 @@ markdown: kramdown
 browserify:
   exts: [".js"] # Target extensions
   command: "browserify -" # Use Browserify in `node_modules`
+autoprefixer:
+  browsers:
+    - "> 1%"
+    - "last 2 versions"
+    - "iOS >= 6"
 
 # theme: ./
