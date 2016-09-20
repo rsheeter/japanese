@@ -2,6 +2,7 @@
 layout: page
 title: Conributing
 permalink: /contributing/
+nav: true
 ---
 
 Contributing guide for the project.

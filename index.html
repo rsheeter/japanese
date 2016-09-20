@@ -7,7 +7,7 @@ background: maroon # This overrides the overscroll color
 
   {% include banner.html %}
 
-  <ul class="list-style-none m0">
+  <ul class="list-style-none p0 m0">
     {% for specimen in site.specimens %}
       <li id="{{ specimen.slug | slice: 3, 500 }}" itemscope itemtype="http://schema.org/BlogPosting">
 

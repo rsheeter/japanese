@@ -1,14 +1,10 @@
 <header role="banner">
-  <div class="clearfix col-12 px2">
+  <div class="clearfix col-12">
   <nav class="max-width-4 mx-auto" role="navigation">
-    <a class="inline-block pt2" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
-    <a class="inline-block pt2" href="{{ site.baseurl }}/about">About</a>
-    <a class="inline-block pt2" href="{{ site.baseurl }}/contributing">Contributing</a>
-
-    <ul class="hide">
-      {% for specimen in site.specimens %}
-        <li><a href="{{ specimen.slug }}">{{ specimen.title }}</a></li>
-      {% endfor %}
+    <ul class="block list-style-none p0 m0 mxn1">
+    <li class="inline-block"><a class="inline-block border-none py2 px1" href="{{ site.baseurl }}/"><span class="a-faux">{{ site.title | escape }}</span></a>
+    <li class="inline-block"><a class="inline-block border-none py2 px1" href="{{ site.baseurl }}/about"><span class="a-faux">About</span></a>
+    <li class="inline-block"><a class="inline-block border-none py2 px1" href="{{ site.baseurl }}/contributing"><span class="a-faux">Contributing</span></a>
     </ul>
   </nav>
   </div>

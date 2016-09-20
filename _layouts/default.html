@@ -5,14 +5,13 @@
 
   <body class="bg-{{ page.background | default: "white" }} h5 line-height-4 font-family-base">
 
-    {% comment %}
-    {% include header.html %}
-    {% endcomment %}
+    {% if page.nav == true %}
+      {% include header.html %}
+    {% endif %}
 
-    <main aria-label="Content">
-      <div class="clearfix">
-        {{ content }}
-      </div>
+
+    <main aria-label="Content" class="clearfix">
+      {{ content }}
     </main>
 
     {% comment %}

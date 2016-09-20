@@ -1,10 +1,19 @@
 <div class="clearfix p2 md-py4 bg-maroon relative"> {% comment %}bg-gradient-darkred-red{% endcomment %}
   <div class="mx-auto max-width-3 md-max-width-4">
+    {% comment %}Early Access Japanese fonts from Google Fonts{% endcomment %}
     <h1 class="h0 white mb2 md-mb4 line-height-3" style="text-shadow: 0 0 1em rgba(0, 0, 0, 0.1875)">
-      <span class="font-weight-600 muted-dark" lang="en">Google Fonts</span>
+      <span class="font-weight-600 muted-dark">Google Fonts</span>
       <span class="font-weight-900">からアーリーアクセス日本語フォント</span>
     </h1>
   </div>
+
+  {% comment %}
+  <ul>
+    {% for specimen in site.specimens %}
+      <li><a href="{{ specimen.slug }}">{{ specimen.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endcomment %}
 
   <div class="mx-auto max-width-5 sm-absolute top-0">
     <ul class="m0 p0 list-style-none flex flex-wrap">
