@@ -1,10 +1,16 @@
-<footer>
+<footer class="col-12 bg-lighten-2 font-family-base">
   <div class="mx-auto max-width-4">
+    <div class="px2 py1">
 
-  <h3>{{ site.data.fonts[page.font].name.ja }}<span lang="en" class="muted-dark">{{ site.data.fonts[page.font].name.en }}</span></h3>
+  <h3>{{ site.data.fonts[page.font].name.ja }}<span lang="en" class="">{{ site.data.fonts[page.font].name.en }}</span></h3>
   <p>{{ site.data.lang.use_it.ja }}</p>
 
   {% include codeblock.html font=page.font %}
+
+  {% comment %}
+  <blockquote>『{{ site.data.fonts[page.font].designer.quote.ja }}』</blockquote>
+  <blockquote lang="en">“{{ site.data.fonts[page.font].designer.quote.en }}”</blockquote>
+  {% endcomment %}
 
   {% if page.authors %}
     <div>{{ site.data.lang.design_by.ja }}
@@ -18,6 +24,7 @@
     <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
   {% endif %}
 
+    </div>
   </div>
 
 </footer>
