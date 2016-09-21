@@ -3,6 +3,7 @@ example:
   name:
     ja: ちょめちょめ
     en: Example
+  fallback: sans-serif
   designer:
     url: http://example.com
     name:
@@ -30,12 +31,22 @@ sawarabimincho:
   name:
     ja: さわらび明朝
     en: Sawarabi Mincho
+  fallack: serif
+  designer:
+    url: false
+    name:
+      ja: mishio
+      en: mishio
+    quote:
+      ja: 本文用のフォントとして使いやすくなるようにイメージしています。
+      en: Designed and optimised as text type.
 
 hannari:
   feature_nav: true
   name:
     ja: はんなり明朝
     en: Hannari Mincho
+  fallback: serif
   designer:
     url: false
     name:
@@ -50,6 +61,7 @@ kokoro:
   name:
     ja: こころ明朝
     en: Kokoro Mincho
+  fallback: serif
   designer:
     url: false
     name:
@@ -64,6 +76,7 @@ nikomojiplus:
   name:
     ja: ニコもじ＋ # ニコモジ＋
     en: Nico Moji+
+  fallback: sans-serif
   designer:
     url: false
     name:
@@ -78,6 +91,7 @@ nikukyu:
   name:
     ja: ニクキュウ
     en: Nikukyu
+  fallback: sans-serif
   designer:
     url: false
     name:
@@ -92,12 +106,22 @@ sawarabigothic:
   name:
     ja: さわらびゴシック
     en: Sawarabi Gothic
+  fallback: sans-serif
+  designer:
+    url: false
+    name:
+      ja: mishio
+      en: mishio
+    quote:
+      ja: 本文用のフォントとして使いやすくなるようにイメージしています。
+      en: Designed and optimised as text type.
 
-notocjk:
+notosansjapanese:
   feature_nav: true
   name:
     ja: Noto Sans Japanese
     en: Noto Sans Japanese
+  fallback: sans-serif
   designer:
     url: "#"
     name:
@@ -114,6 +138,7 @@ harenosora:
   name:
     ja: はれのそら明朝
     en: Harenosora Mincho
+  fallback: sans-serif
   designer:
     url: false
     name:
