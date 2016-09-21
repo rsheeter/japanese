@@ -1,0 +1,67 @@
+// Threaded text
+//
+// Higher-level responsive utilities for flowing
+// text across columns.
+//
+// Markup:
+// <div class="sm-thread-2 md-thread-3">
+//   <p>どうやらアトモスフェアの高い位置まで到達したようだった。</p>
+//   <p>空は真っ暗で、星の瞬きもなくなっていた。</p>
+// </div>
+//
+// Styleguide: module.thread
+.thread-1,
+.thread-2,
+.thread-3 {
+  column-gap: $space-2;
+  column-fill: balance;
+}
+
+.thread-1 { columns: 1 $width-2 }
+.thread-2 { columns: 2 $width-1 }
+.thread-3 { columns: 3 ($width-1 / 2) }
+
+@media #{$breakpoint-sm} {
+
+  .sm-thread-1,
+  .sm-thread-2,
+  .sm-thread-3 {
+    column-gap: $space-2;
+    column-fill: balance;
+  }
+
+  .sm-thread-1 { columns: 1 $width-2 }
+  .sm-thread-2 { columns: 2 $width-1 }
+  .sm-thread-3 { columns: 3 ($width-1 / 2) }
+
+}
+
+@media #{$breakpoint-md} {
+
+  .md-thread-1,
+  .md-thread-2,
+  .md-thread-3 {
+    column-gap: $space-2;
+    column-fill: balance;
+  }
+
+  .md-thread-1 { columns: 1 $width-2 }
+  .md-thread-2 { columns: 2 $width-1 }
+  .md-thread-3 { columns: 3 ($width-1 / 2) }
+
+}
+
+@media #{$breakpoint-lg} {
+
+  .lg-thread-1,
+  .lg-thread-2,
+  .lg-thread-3 {
+    column-gap: $space-2;
+    column-fill: balance;
+  }
+
+  .lg-thread-1 { columns: 1 $width-2 }
+  .lg-thread-2 { columns: 2 $width-1 }
+  .lg-thread-3 { columns: 3 ($width-1 / 2) }
+
+}
