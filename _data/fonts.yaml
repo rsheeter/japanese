@@ -74,7 +74,8 @@ kokoro:
 nikomojiplus:
   feature_nav: true
   name:
-    ja: ニコもじ＋ # ニコモジ＋
+    # ニコモジ＋
+    ja: ニコもじ＋
     en: Nico Moji+
   fallback: sans-serif
   designer:
