@@ -1,15 +1,17 @@
-<footer class="bg-blue">
-  <h2>Authors</h2>
+<footer>
   {% if page.authors %}
-    <ul class="list-style-none p0 m0">
+  <div>{{ site.data.lang.design_by.ja }}
+    <ul class="list-style-none p0 m0 inline-block">
       {% for author in page.authors %}
-        <li><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a></li>
+        <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
       {% endfor %}
     </ul>
+  </div>
   {% elsif page.author %}
-    <p>{{ site.data.authors[page.author].name | escape }}</p>
+    <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
   {% endif %}
 
+<h3>{{ site.data.lang.use_it.ja }}</h3>
 {% highlight css %}
 @import url("http://fonts.googleapis.com/earlyaccess/{{ page.font }}.css")
 {% endhighlight %}
