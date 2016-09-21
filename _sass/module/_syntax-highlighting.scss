@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: $navy;
+    background: rgba($black, 0.4);
     color: $fuchsia;
     padding: $space-2;
     overflow-x: scroll;
@@ -46,7 +46,7 @@
     .kt    { color: $white; font-weight: normal } // Keyword.Type
     .m     { color: #099 } // Literal.Number
     .s     { color: darken($fuchsia, 20%) } // Literal.String
-    .na    { color: $blue } // Name.Attribute
+    .na    { color: darken($fuchsia, 5%) } // Name.Attribute
     .nb    { color: lighten($fuchsia, 5%) } // Name.Builtin
     .nc    { color: $white; font-weight: normal } // Name.Class
     .no    { color: $blue } // Name.Constant
@@ -54,7 +54,7 @@
     .ne    { color: #900; font-weight: normal } // Name.Exception
     .nf    { color: #900; font-weight: normal } // Name.Function
     .nn    { color: $green } // Name.Namespace
-    .nt    { color: #000080 } // Name.Tag
+    .nt    { color: lighten($fuchsia, 5%) } // Name.Tag
     .nv    { color: $blue } // Name.Variable
     .ow    { font-weight: normal } // Operator.Word
     .w     { color: #bbb } // Text.Whitespace

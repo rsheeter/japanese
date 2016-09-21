@@ -1,9 +1,14 @@
----
-# Example:
-# {% include codeblock.html lang="css" value="@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css)" %}
----
+{% comment %}
+{% highlight css %}
+@import url("http://fonts.googleapis.com/earlyaccess/{{ include.font | page.font }}.css")
+{% endhighlight %}
+{% endcomment %}
 
+{% highlight html %}
+<link href="http://fonts.googleapis.com/earlyaccess/{{ include.font | page.font }}.css" />
+{% endhighlight %}
 
-<pre class="block p2 m0 border-none overflow-scroll bg-navy fuchsia rounded language-{{ include.lang }}" data-language="{{ include.lang }}">
-  <code>{{ include.value }}</code>
-</pre>
+{% highlight css %}
+.wf-{{ include.font | page.font }} {
+  font-family: "{{ site.data.fonts[include.font].name.en | site.data.fonts[page.font].name.en }}", {{ site.data.fonts[include.font].fallback | site.data.fonts[page.font].fallback }};
+}{% endhighlight %}

@@ -1,24 +1,23 @@
 <footer>
+  <div class="mx-auto max-width-4">
+
+  <h3>{{ site.data.fonts[page.font].name.ja }}<span lang="en" class="muted-dark">{{ site.data.fonts[page.font].name.en }}</span></h3>
+  <p>{{ site.data.lang.use_it.ja }}</p>
+
+  {% include codeblock.html font=page.font %}
+
   {% if page.authors %}
-  <div>{{ site.data.lang.design_by.ja }}
-    <ul class="list-style-none p0 m0 inline-block">
-      {% for author in page.authors %}
-        <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
-      {% endfor %}
-    </ul>
-  </div>
+    <div>{{ site.data.lang.design_by.ja }}
+      <ul class="list-style-none p0 m0 inline-block">
+        {% for author in page.authors %}
+          <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
   {% elsif page.author %}
     <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
   {% endif %}
 
-<h3>{{ site.data.lang.use_it.ja }}</h3>
-{% highlight css %}
-@import url("http://fonts.googleapis.com/earlyaccess/{{ page.font }}.css")
-{% endhighlight %}
-
-{% highlight css %}
-.example {
-  font-family: "{{ site.data.fonts[page.font].name.en }}", {{ site.data.fonts[page.font].fallback }};
-}{% endhighlight %}
+  </div>
 
 </footer>
