@@ -3,9 +3,10 @@
 font: example
 
 # Should support multiple authors
-author:
+# Key for `_data/authors.json`
+authors:
   - marikotakagi
-  - kennethormandy # Key for `_data/authors.json`
+  - kennethormandy
 ---
 
 <div class="bg-silver black p2 py4">
@@ -16,21 +17,8 @@ author:
 
       <p class="vertical"><span class="upright">1993</span>年に頂上付近の見返峠の駐車場で料金徴収が開始された。これは、有料道路であった八幡平アスピーテラインの無料化と松川温泉と藤七温泉を結ぶ樹海ラインの開通により、利用者の急増に対応するために、利用者に自然を守るための応分の負担を求めるためである。駐車料金は、公園施設の維持管理と美化清掃などの費用として使われている。</p>
     </div>
-    <p>{{ site.data.authors[page.author].name | escape }}</p>
   </div>
-
-  <footer>
-{% highlight css %}
-@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
-{% endhighlight %}
-
-{% highlight css %}
-.example {
-  font-family: "Noto Sans JP", sans-serif;
-}{% endhighlight %}
-
-
-  </footer>
+  {% include specimen-colophon.html %}
 </div>
 
 <!--
