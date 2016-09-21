@@ -31,7 +31,7 @@ sawarabimincho:
   name:
     ja: さわらび明朝
     en: Sawarabi Mincho
-  fallack: serif
+  fallback: serif
   designer:
     url: false
     name:
