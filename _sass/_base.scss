@@ -231,3 +231,32 @@ a,
 }
 
 .max-width-5 { max-width: $width-4 * 1.5 }
+
+// Additional rounded utilities
+//
+// No styleguide reference.
+@media #{ $breakpoint-sm } {
+  .sm-rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
+  .sm-rounded-left   { border-radius: $border-radius 0 0 $border-radius }
+  .sm-rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
+  .sm-rounded-top    { border-radius: $border-radius $border-radius 0 0 }
+}
+
+// Mix blend mode
+//
+// No styleguide reference.
+.blend-overlay {
+  mix-blend-mode: overlay;
+}
+
+.blend-hardlight {
+  mix-blend-mode: hard-light;
+}
+
+.blend-luminosity {
+  mix-blend-mode: luminosity;
+}
+
+.blend-multiply {
+  mix-blend-mode: multiply;
+}
