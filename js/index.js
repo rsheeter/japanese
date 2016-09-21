@@ -22,7 +22,5 @@ if (document) {
         googleFontsBadge()
       }
     }
-
-    smoothScroll()
   }
 }
