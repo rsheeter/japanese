@@ -9,6 +9,7 @@ background: maroon # This overrides the overscroll color
 
   <ul class="list-style-none p0 m0">
     {% for specimen in site.specimens %}
+      {% if specimen.font != false %}
       <li id="{{ specimen.slug | slice: 3, 500 }}" itemscope itemtype="http://schema.org/BlogPosting">
 
 {% comment %}
@@ -43,6 +44,7 @@ author_data: {{ site.data.authors[specimen.author].name }}
 
           </div>
       </li>
+      {% endif %}
     {% endfor %}
   </ul>
 
