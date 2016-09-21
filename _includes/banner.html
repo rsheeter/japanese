@@ -7,22 +7,25 @@
     </h1>
   </div>
 
+  {% assign columns = "4, 4, 4, 6, 6, 3, 3, 3, 12" | split: ", " %}
+
   <div class="mx-auto max-width-5 sm-absolute top-0">
     <ul class="m0 p0 list-style-none flex flex-wrap translate-banner">
       {% for listing in site.data.fonts %}
         {% for slug in listing %}
           {% assign font = site.data.fonts[slug] %}
-
           {% if font.feature_nav %}
-            <li class="col-6 sm-col-4">
+            <li class="col-6 sm-col-{{ columns[counter]] }}">
+              <!-- {% increment counter %} -->
               <div class="center p2 sm-p3 md-p4">
                 {% comment %} TODO hash links should come from object key {% endcomment %}
-                <a class="button-raised px3 py2 sm-px2 md-px3 z1 h5 sm-h6 md-h5 relative left-align" href="#{{ font.key }}">
+                <a class="button-raised px3 py2 sm-px2 md-px3 z1 h5 sm-h6 md-h5 relative left-align" href="#{{ slug }}">
                   <span>{{ font.name.ja }}</span>
                   <span lang="en" class="block muted">{{ font.name.en }}</span>
                 </a>
               </div>
             </li>
+
           {% endif %}
 
         {% endfor %}
