@@ -50,10 +50,10 @@
 
 @keyframes float {
   from {
-    transform: translate(120vw, -10vh);
+    transform: translate(120vw, -5vh);
   }
   to {
-    transform: translate(-120vw, 10vh);
+    transform: translate(-120vw, 5vh);
   }
 }
 
@@ -63,5 +63,5 @@
 }
 
 .transform-square {
-  transform: rotate(135deg) translateY(-110%);
+  transform: rotate(135deg) translateY(-115%);
 }
