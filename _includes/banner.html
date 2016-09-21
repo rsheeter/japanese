@@ -21,7 +21,9 @@
                 {% comment %} TODO hash links should come from object key {% endcomment %}
                 <a class="button-raised px3 py2 sm-px2 md-px3 z1 h5 sm-h6 md-h5 relative left-align" href="#{{ slug }}">
                   <span>{{ font.name.ja }}</span>
-                  <span lang="en" class="block muted">{{ font.name.en }}</span>
+                  {% if font.name.ja != font.name.en %}
+                    <span lang="en" class="block muted">{{ font.name.en }}</span>
+                  {% endif %}
                 </a>
               </div>
             </li>
