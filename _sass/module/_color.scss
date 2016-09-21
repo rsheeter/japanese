@@ -12,6 +12,10 @@
   background-image: linear-gradient(to bottom, mix($red, $navy, 75%) 0%, $red 100%);
 }
 
+.bg-gradient-fuchsia-white {
+  background-image: linear-gradient(to bottom, $fuchsia 0%, $white 100%);
+}
+
 
 // Responsive colors
 
