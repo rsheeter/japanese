@@ -58,14 +58,14 @@
 }
 
 @font-face {
-  font-family: 'Nico Moji';
+  font-family: 'Nico Moji+';
   font-style: normal;
   font-weight: normal;
   src: url('/fonts/nicomoji/nicomoji-plus_1.02.ttf')
 }
 
-.wf-nicomoji {
-  font-family: 'Nico Moji', sans-serif;
+.wf-nicomojiplus {
+  font-family: 'Nico Moji+', sans-serif;
 }
 
 @font-face {
@@ -77,6 +77,114 @@
 
 .wf-nikukyu {
   font-family: 'Nikukyu', sans-serif;
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/mplus1p/mplus-1p-black.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/mplus1p/mplus-1p-heavy.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/mplus1p/mplus-1p-bold.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/mplus1p/mplus-1p-medium.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/mplus1p/mplus-1p-regular.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/mplus1p/mplus-1p-light.ttf')
+}
+
+@font-face {
+  font-family: 'M+';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/mplus1p/mplus-1p-thin.ttf')
+}
+
+.wf-mplus {
+  font-family: 'M+', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-black.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-heavy.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-bold.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-medium.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-regular.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-light.ttf')
+}
+
+@font-face {
+  font-family: 'Rounded M+';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/mplus1crounded/rounded-mplus-1c-thin.ttf')
+}
+
+
+.wf-roundedmplus {
+  font-family: 'Rounded M+', 'M+', sans-serif;
 }
 
 @import url('http://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
