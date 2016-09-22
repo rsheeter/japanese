@@ -12,7 +12,7 @@ TODO Documentation about adding your own metadata.
 - [ ] Noto CJK `notocjk`
 
 - [ ] M+ `mplus1p`
-- [ ] Rounded Mgen+ `mplus1crounded`
+- [ ] Rounded Mgen+ `mplus1crounded` (what is the official name on this? _M+ Rounded_? _Rounded M+_? _Rounded Mgen+_?)
 
 ### Postponed
 
