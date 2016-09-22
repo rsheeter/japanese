@@ -12,7 +12,7 @@ if (document) {
   var elsFitterHappierText = document.getElementsByClassName('js-fitterHappierText')
 
   bigIdeasText(elsBigIdeasText)
-  fitterHappierText(elsFitterHappierText) // opts: { baseline: 14, paddingY: 2 }
+  fitterHappierText(elsFitterHappierText, { baseline: 14, paddingY: 2 }) // TODO Opts from data-attrs
 
   // Based on approach in https://git.io/viDQx
   if (typeof window !== 'undefined') {
