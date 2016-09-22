@@ -23,4 +23,39 @@ if (document) {
       }
     }
   }
+
+  var transitionLoop = function (el) {
+    var opts = {
+      className: 'is-translated-100',
+      timeout: 5000
+    }
+
+    this.addTransitionClass = function () {
+      el.classList.add(opts.className)
+
+      setTimeout(function () {
+        self.removeTransitionClass()
+      }, opts.timeout)
+    }
+
+    this.removeTransitionClass = function () {
+      el.classList.remove(opts.className)
+
+      setTimeout(function () {
+        self.addTransitionClass()
+      }, opts.timeout)
+    }
+
+    el.classList.add('is-translated') // Transiton class
+
+    setTimeout(function () {
+      var self = this
+      self.addTransitionClass()
+    }, opts.timeout)
+  }
+
+  transitionLoop(document.getElementById('js-translateLoop'))
+
+
+
 }
