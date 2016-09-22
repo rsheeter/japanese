@@ -8,6 +8,9 @@
 // but I don’t anticipate using that anywhere in the site anyway.
 //
 // No styleguide reference.
+.ty50 {  transform: translateY(50%) }
+.tyn50 { transform: translateY(-50%) }
+
 @media #{ $breakpoint-sm } {
 
   .sm-ty1 { transform: translateX($space-1) }
