@@ -71,7 +71,7 @@ kokoro:
       ja: 少しほっそりとした、角丸な明朝体です。まろやかで、軽い感じがする文字です。
       en: A slim Mincho face with rounded endings. The characters look smooth and light.
 
-nikomojiplus:
+nicomojiplus:
   feature_nav: true
   name:
     # ニコモジ＋
@@ -124,16 +124,13 @@ notosansjapanese:
     en: Noto Sans Japanese
   fallback: sans-serif
   designer:
-    url: "#"
+    url: false
     name:
       ja: 西塚涼子
       en: Ryoko Nishizuka
     quote:
       ja: false
       en: Noto fonts are intended to be visually harmonious across multiple languages, with compatible heights and stroke thicknesses.
-
-
-# Incomplete
 
 harenosora:
   name:
@@ -148,6 +145,38 @@ harenosora:
     quote:
       ja: 誰でも、気軽に使ってほしいです。
       en: I hope people will enjoy using this typeface.
+
+# Incomplete
+
+mplus:
+  feature_nav: true
+  name:
+    ja: M+
+    en: M+
+  fallback: sans-serif
+  designer:
+    url: false
+    name:
+      ja: 森下浩司
+      en:
+    quote:
+      ja: 日常的に使うための飽きのこない、それでいてちょっと気になるデザイン。
+      en:
+
+mplusrounded:
+  feature_nav: false
+  name:
+    ja: Rounded Mgen+
+    en: Rounded Mgen+
+  fallback: sans-serif
+  designer:
+    url: false
+    name:
+      ja: 自家製フォント工房
+      en:
+    quote:
+      ja:
+      en:
 
 keifont:
   name:
