@@ -32,11 +32,12 @@ if (document) {
     }
 
     this.changeContent = function (el, content) {
-      console.log('change')
+      var parent = el.parentNode || false
       el.textContent = content
-      // if (opts.scale) {
-      //   fitterHappierText([el.parentNode], { baseline: 14, paddingY: 2 })
-      // }
+
+      if (opts.scale && parent) {
+        bigIdeasText(parent, { baseline: 14, paddingY: 2 })
+      }
     }
 
     if (els.length > 0) {
