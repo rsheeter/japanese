@@ -163,11 +163,11 @@ mplus:
       ja: 日常的に使うための飽きのこない、それでいてちょっと気になるデザイン。
       en:
 
-mplusrounded:
+roundedmplus:
   feature_nav: false
   name:
-    ja: Rounded Mgen+
-    en: Rounded Mgen+
+    ja: Rounded M+
+    en: Rounded M+
   fallback: sans-serif
   designer:
     url: false
