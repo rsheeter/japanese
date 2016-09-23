@@ -1,0 +1,10 @@
+---
+title: Test
+layout: default
+---
+
+{% for specimen in site.specimens %}
+  {% if specimen.font == 'nicomojiplus' %}
+    {{ specimen.content }}
+  {% endif %}
+{% endfor %}
