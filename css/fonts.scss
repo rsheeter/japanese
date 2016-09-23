@@ -189,6 +189,84 @@
 
 @import url('http://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
 
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/noto/NotoSansCJKjp-Black.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/noto/NotoSansCJKjp-Bold.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/noto/NotoSansCJKjp-Medium.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/noto/NotoSansCJKjp-Regular.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/noto/NotoSansCJKjp-DemiLight.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/noto/NotoSansCJKjp-Light.otf')
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/fonts/noto/NotoSansCJKjp-Thin.otf')
+}
+
 .wf-notosansjapanese {
   font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/noto/NotoSans-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/noto/NotoSans-Bold.ttf')
+}
+
+.wf-notosans {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/noto/NotoSerif-Regular.ttf')
+}
+
+.wf-notosans {
+  font-family: 'Noto Serif', sans-serif;
 }
