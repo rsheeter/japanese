@@ -16,14 +16,17 @@
 
 title: Googleの日本語フォント # Google Fonts Japanese
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >
+  我々は、Webサイトや製品に個性と性能をもたらすための最善の方法は、優れたデザインと技術を通じてであると考えています。
+  私たちの目標は、オープンソースのデザイナーのWebフォントの直感的かつ堅牢なディレクトリを提供することによって、
+  そのプロセスを簡単にすることです。豊富なカタログを使用することで、あなたが共有し、あなたが世界のどこにいるかシームレス-関係なく、
+  任意の設計プロジェクトにタイポグラフィを統合することはできません。
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
-twitter_username: googlefonts
-github_username:  googlefonts
+social:
+  twitter: googlefonts
+  github:  googlefonts
 exclude: ['node_modules']
 
 # “Not everything is a post or a page.” Rather than use posts, these are the type

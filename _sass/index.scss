@@ -14,6 +14,11 @@ $aqua: rgb(230, 245, 255);
 
 $caps-letter-spacing: 0;
 
+// Border thicknesses
+$border-thin: thin;
+$border-medium: medium;
+$border-thick: thick;
+
 // Default font families
 $font-family-base: "Noto Sans", "Noto Sans JP", sans-serif;
 $font-family-serif: "Noto Serif", "Noto Sans JP", Georgia, serif;
@@ -75,6 +80,7 @@ $h1: 2rem;
 @import "module/translate";
 @import "module/color";
 @import "module/font";
+@import "module/border";
 @import "module/dropshadow";
 @import "module/syntax-highlighting";
 @import "state";

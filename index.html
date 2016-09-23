@@ -48,52 +48,7 @@ author_data: {{ site.data.authors[specimen.author].name }}
     {% endfor %}
   </ul>
 
-  <div class="clearfix bg-white black p2 md-py4 border-top border-white">
-    <div class="mx-auto max-width-3">
-      <div class="sm-flex">
-        <div class="col-4" lang="en">
-          <p><a href="{{ "/about" | prepend: site.baseurl }}">About</a></p>
-          <p><a href="{{ "/contribute" | prepend: site.baseurl }}">Contribute</a></p>
-          <p><a href="https://twitter.com/googlefonts">@googlefonts on Twitter</a></p>
-          <p><a href="https://github.com/googlefonts">@googlefonts on GitHub</a></p>
-          <p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via <abbr class="caps">RSS</abbr></a></p>
-        </div>
-        <div class="col-8">
-          <h3 lang="en">About the project</h3>
-          <p>偉大なタイポグラフィを介してウェブをより美しく高速で、オープン作ります</p>
-          <p>我々は、Webサイトや製品に個性と性能をもたらすための最善の方法は、優れたデザインと技術を通じてであると考えています。私たちの目標は、オープンソースのデザイナーのWebフォントの直感的かつ堅牢なディレクトリを提供することによって、そのプロセスを簡単にすることです。豊富なカタログを使用することで、あなたが共有し、あなたが世界のどこにいるかシームレス-関係なく、任意の設計プロジェクトにタイポグラフィを統合することはできません。</p>
-          <div class="flex mxn1" lang="en">
-            <div class="col-4 px1">
-              <a href="{{ site.data.authors['marikotakagi'].url }}">{{ site.data.authors['marikotakagi'].name }}</a>
-              {{ site.data.authors['marikotakagi'].credit }}
-            </div>
-            <div class="col-4 px1">
-              <a href="{{ site.data.authors['kennethormandy'].url }}">{{ site.data.authors['kennethormandy'].name }}</a>
-              {{ site.data.authors['kennethormandy'].credit }}
-            </div>
-            <div class="col-4 px1">
-              Google Fonts team
-              Dave Crossland
-              Yuin Chien
-              Omer Ziv
-              Lasse Fister
-            </div>
-          </div>
-          <div class="sm-thread-2 md-thread-3">
-            <h4>{{ site.data.lang.contributors.ja }}</h4>
-            {% for listing in site.data.authors %}
-              {% for author in listing %}
-                {% if author.hidden != true %}
-                  <p class="m0">{{ author.name }}</p>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-            <p><a href="/contribe">{{ site.data.lang.contribute.ja }}</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include footer.html %}
 
 
   {% comment %}
