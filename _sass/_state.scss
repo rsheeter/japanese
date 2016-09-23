@@ -15,19 +15,15 @@
   transform: translateY(100%);
 }
 
-// Pointer Translate Y 0
+// Pointer animate paused
 //
 // This is used in the M+ section to override the looping JS
 // animation on hover (or, potentially, other pointer events).
-.is-pointer-ty0 {
-  transition: transform 1s ease-in-out;
-
+.is-pointer-animate-paused {
   &:hover,
   &:focus {
-    outline: 5px solid $purple;
+    // Animation class is a child for a larget tap-target area
     .animate {
-      // `!important` is okay on state classes, we really do want this to be true.
-      // Stop cycling the animation when the visitor hovers.
       animation-play-state: paused;
     }
   }
