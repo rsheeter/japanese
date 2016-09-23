@@ -10,6 +10,7 @@ var smoothScroll = require('smoothscroll')
 if (document) {
   var elsBigIdeasText = document.getElementsByClassName('js-bigIdeasText')
   var elsFitterHappierText = document.getElementsByClassName('js-fitterHappierText')
+  var elsCycle = document.querySelectorAll('[data-cycle]')
 
   bigIdeasText(elsBigIdeasText)
   fitterHappierText(elsFitterHappierText, { baseline: 14, paddingY: 2 }) // TODO Opts from data-attrs
@@ -24,38 +25,44 @@ if (document) {
     }
   }
 
-  var transitionLoop = function (el) {
+  var contentCycle = function (els, otps) {
     var opts = {
-      className: 'is-translated-100',
-      timeout: 5000
+      timeout: 1000,
+      scale: true
     }
 
-    this.addTransitionClass = function () {
-      el.classList.add(opts.className)
-
-      setTimeout(function () {
-        self.removeTransitionClass()
-      }, opts.timeout)
+    this.changeContent = function (el, content) {
+      console.log('change')
+      el.textContent = content
+      // if (opts.scale) {
+      //   fitterHappierText([el.parentNode], { baseline: 14, paddingY: 2 })
+      // }
     }
 
-    this.removeTransitionClass = function () {
-      el.classList.remove(opts.className)
+    if (els.length > 0) {
+      for (var i = 0; i < els.length; i++) {
+        var self = this
+        var el = els[i]
+        var num = 0
+        var dataCycle = el.getAttribute('data-cycle')
+        var dataCycleTimeout = el.getAttribute('data-cycleTimeout')
+        var contentList = typeof dataCycle !== 'undefined' ? dataCycle.split(', ') : []
+        var timeout = typeof dataCycleTimeout !== 'undefined' ? parseInt(dataCycleTimeout, 10) : opts.timeout
 
-      setTimeout(function () {
-        self.addTransitionClass()
-      }, opts.timeout)
+        // Init contentList,`0` timeout to init
+        // immediately with first list item content
+        setTimeout(function() { cycle(contentList, 0); }, 0);
+
+        function cycle(contentList, num) {
+          self.changeContent(el, contentList[num], num)
+
+          setTimeout(function() { cycle(contentList, ((num + 1) >= contentList.length) ? 0 : num + 1); }, timeout);
+        }
+      }
+
     }
-
-    el.classList.add('is-translated') // Transiton class
-
-    setTimeout(function () {
-      var self = this
-      self.addTransitionClass()
-    }, opts.timeout)
   }
 
-  transitionLoop(document.getElementById('js-translateLoop'))
-
-
+  contentCycle(elsCycle)
 
 }

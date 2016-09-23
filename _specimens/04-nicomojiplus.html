@@ -3,19 +3,20 @@ font: nicomojiplus
 font_local: true
 ---
 
-<div class="bg-black">
-  <div class="sm-flex">
-    <div class="col-12 sm-col-9 md-col-10 olive p2 py4">
-      <img src="/media/illustration-storefront-2-outlined.svg" class="col-12 block" />
-      <div class="mx-auto max-width-3 pb2">
-        <div class="h1 wf-nicomojiplus js-fitterHappierText">
-          <span>ニCもじ</span>
-        </div>
+<div class="clearfix bg-black">
+  <div class="col-12 olive p2 py4">
+    <img src="/media/illustration-storefront-2-outlined.svg" class="col-12 block" />
+    <div class="mx-auto max-width-3 pb2">
+      <div class="h1 wf-nicomojiplus">{% comment %} js-fitterHappierText {% endcomment %}
+        <div data-cycle="ニCもじ, カフェでコーヒ, おちゃにしますか?, いらっしゃいませ!"
+             data-cycleTimeout="5000">ニCもじ</div>
       </div>
-      <img src="/media/illustration-storefront-3-outlined.svg" class="col-12 block" />
     </div>
-    <div class="col-12 sm-col-3 md-col-2 p2 white bg-lighten-2">
-      {% include specimen-colophon.html %}
-    </div>
+
+    {% comment %} TODO Ku-ku (Do-Font) ニコもじ+ {% endcomment %}
+    {% comment %} TODO 『 すこしでもデザインの  てだすけになれれば  さいわいです。』 {% endcomment %}
+
+    <img src="/media/illustration-storefront-3-outlined.svg" class="col-12 block" />
   </div>
+  {% include specimen-colophon.html %}
 </div>
