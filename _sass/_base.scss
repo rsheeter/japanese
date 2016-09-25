@@ -87,12 +87,6 @@ a,
   text-orientation: upright;
 }
 
-.icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-}
-
 // Largest responsive header
 .h0 {
   font-size: $h1 * 1.5;
@@ -264,4 +258,21 @@ a,
 
 .blend-exclusion {
   mix-blend-mode: exclusion;
+}
+
+// Social media icons
+//
+// Hanging icons, currently only used in footer.
+//
+// Markup:
+// <a href="#" class="icon inline-block border-none"><svg><!-- Icon --></svg></a>
+//
+// No styleguide reference.
+.icon {
+  margin-left: -20px;
+  svg {
+    transform: translate(-4px, 4px);
+    width: 16px;
+    height: 16px;
+  }
 }

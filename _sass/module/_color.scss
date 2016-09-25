@@ -22,3 +22,6 @@
 @media #{ $breakpoint-md } {
   .md-white { color: $white }
 }
+
+.fill-navy,
+.fill-navy svg { fill: $navy; }

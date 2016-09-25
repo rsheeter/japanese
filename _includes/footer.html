@@ -1,55 +1,64 @@
-<div class="clearfix bg-white black p2 md-py4 border-navy border-medium border-top">
+<div class="clearfix bg-white black p2 md-py4">
+  <hr class="block mx-auto max-width-4 col-12 border-none bg-navy muted-dark pt1 rounded mb4" />
+
   <div class="mx-auto max-width-3">
     <div class="sm-flex flex-wrap">
       <div class="col-4"></div>
       <div class="col-8">
-        <h3 class="mt0">About {{ site.title | escape }}</h3>
+        <h3 class="mt0">{{ site.title | escape }}</h3>
       </div>
       <div class="col-4" lang="en">
         <ul class="list-style-none p0 m0">
-        <li><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
-        <li><a href="{{ "/contributing" | prepend: site.baseurl }}">Contribute</a></li>
+        <li><a class="border-none" href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
+        <li><a class="border-none" href="{{ "/contributing" | prepend: site.baseurl }}">Contribute</a></li>
         {% if site.social and site.social.github %}
-          <li>{% include icon-github.html username=site.social.github %}</li>
+          <li class="fill-navy">{% include icon-github.html username=site.social.github %}</li>
         {% endif %}
 
         {% if site.social and site.social.twitter %}
-          <li>{% include icon-twitter.html username=site.social.twitter %}</li>
+          <li class="fill-navy">{% include icon-twitter.html username=site.social.twitter %}</li>
         {% endif %}
-        <li>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via <abbr class="caps">RSS</abbr></a></li>
+        <li>Subscribe <a class="border-none" href="{{ "/feed.xml" | prepend: site.baseurl }}">via <abbr class="caps">RSS</abbr></a></li>
         </ul>
       </div>
       <div class="col-8">
-        <p>{{ site.description | escape }}</p>
+        <p class="mt0">{{ site.description | escape }}</p>
         <div class="flex mxn1" lang="en">
           <div class="col-4 px1">
-            <a href="{{ site.data.authors['marikotakagi'].url }}">{{ site.data.authors['marikotakagi'].name }}</a>
+            <a class="border-none" href="{{ site.data.authors['marikotakagi'].url }}">{{ site.data.authors['marikotakagi'].name }}</a>
             {{ site.data.authors['marikotakagi'].credit }}
           </div>
           <div class="col-4 px1">
-            <a href="{{ site.data.authors['kennethormandy'].url }}">{{ site.data.authors['kennethormandy'].name }}</a>
+            <a class="border-none" href="{{ site.data.authors['kennethormandy'].url }}">{{ site.data.authors['kennethormandy'].name }}</a>
             {{ site.data.authors['kennethormandy'].credit }}
           </div>
           <div class="col-4 px1">
             <h5 class="h5 mt0">Google Fonts team</h5>
             <ul class="list-style-none m0 p0">
-              <li><a href="{{ site.data.authors['davecrossland'].url }}">{{ site.data.authors['davecrossland'].name }}</a></li>
-              <li><a href="{{ site.data.authors['yuinchien'].url }}">{{ site.data.authors['yuinchien'].name }}</a></li>
-              <li><a href="{{ site.data.authors['omerziv'].url }}">{{ site.data.authors['omerziv'].name }}</a></li>
-              <li><a href="{{ site.data.authors['lassefister'].url }}">{{ site.data.authors['lassefister'].name }}</a></li>
+              <li><a class="border-none" href="{{ site.data.authors['davecrossland'].url }}">{{ site.data.authors['davecrossland'].name }}</a></li>
+              <li><a class="border-none" href="{{ site.data.authors['yuinchien'].url }}">{{ site.data.authors['yuinchien'].name }}</a></li>
+              <li><a class="border-none" href="{{ site.data.authors['omerziv'].url }}">{{ site.data.authors['omerziv'].name }}</a></li>
+              <li><a class="border-none" href="{{ site.data.authors['lassefister'].url }}">{{ site.data.authors['lassefister'].name }}</a></li>
             </ul>
           </div>
         </div>
         <div class="sm-thread-2 md-thread-3">
-          <h4>{{ site.data.lang.contributors.ja }}</h4>
-          {% for listing in site.data.authors %}
-            {% for author in listing %}
-              {% if author.hidden != true %}
-                <p class="m0">{{ author.name }}</p>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-          <p><a href="/contribe">{{ site.data.lang.contribute.ja }}</a></p>
+          {% comment %} 6 already listed collaborators, this could be better {% endcomment %}
+          {% if site.data.authors.length > 6 %}
+            <h4>{{ site.data.lang.contributors.ja }}</h4>
+
+            <ul class="list-style-none m0 p0">
+              {% for listing in site.data.authors %}
+                {% for author in listing %}
+                  {% if author.hidden != true %}
+                    <li>{{ author.name }}</li>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </ul>
+
+            <p><a class="border-none" href="/contribe">{{ site.data.lang.contribute.ja }}</a></p>
+          {% endif %}
         </div>
       </div>
     </div>
