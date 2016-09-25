@@ -6,8 +6,9 @@ authors:
   - kennethormandy
 ---
 
-<div class="bg-navy white wf-mplus">
-  <div class="bg-lighten-4 p2 md-p4">
+<div class="bg-navy white wf-mplus selection-navy">
+  <div class="bg-lighten-4">
+  <div class="p2 md-p4">
   <div class="mx-auto max-width-5">
     <div class="py4 sm-py3"> {% comment %} Don’t apply padding to pointer target! Big enough already. {% endcomment %}
     <div class="">{% comment %}class="is-pointer-animate-paused"{% endcomment %}
@@ -77,7 +78,7 @@ authors:
 
     <div class="mx-auto max-width-4">
 
-      <div class="sm-flex mxn1 sm-mxn2 md-mxn3 border">
+      <div class="sm-flex mxn1 sm-mxn2 md-mxn3 py3 md-py3">
         <div class="col-12 sm-col-6 px1 sm-px2 md-px3 wf-mplus navy">
           <div class="font-weight-200 mb1"><div class="js-fitterHappierText">すると、夜空に最初の流れ星が現れた。</div></div>
           <div class="font-weight-300 mb1"><div class="js-fitterHappierText">すると、夜空に最初の流れ星が現れた。</div></div>
@@ -97,15 +98,91 @@ authors:
           <div class="font-weight-900 mb1"><div class="js-fitterHappierText">すると、夜空に最初の流れ星が現れた。</div></div>
         </div>
       </div>
-
-      {% include specimen-colophon.html %}
-
-      {% include codeblock.html font=page.font %}
-      {% include codeblock.html font="roundedmplus" %}
-
-    </div>
-
   </div>
+  </div>
+</div>
+  {% comment %}
+  Custom colophon included below since there are two typefaces
+  {% include specimen-colophon.html %}
+  {% endcomment %}
+
+  {% assign fontData = site.data.fonts[page.font] %}
+  <footer class="clearfix">
+    <div class="sm-flex">
+      <div class="col-12 sm-col-6 p2 sm-p3 bg-navy">
+        <div class="mx-auto max-width-3">
+          <h3>
+            {{ fontData.name.ja }}
+            {% if fontData.name.ja != fontData.name.en %}
+              <span lang="en" class="">{{ fontData.name.en }}</span>
+            {% endif %}
+          </h3>
+          <p>{{ site.data.lang.use_it.ja }}</p>
+          {% include codeblock.html font=page.font %}
+
+          <h3>
+            {{ site.data.fonts['roundedmplus'].name.ja }}
+            {% if site.data.fonts['roundedmplus'].name.ja != site.data.fonts['roundedmplus'].name.en %}
+              <span lang="en" class="">{{ site.data.fonts['roundedmplus'].name.en }}</span>
+            {% endif %}
+          </h3>
+          {% include codeblock.html font="roundedmplus" %}
+        </div>
+      </div>
+      <div class="col-12 sm-col-6 p2 sm-py3">
+        <div class="mx-auto max-width-2">
+
+          {% comment %}
+            Type designer quotation and credit
+          {% endcomment %}
+
+          <div class="mb3">
+            <blockquote class="indent-n1 h1 wf-{{ font }}">『{{ fontData.designer.quote.ja }}』</blockquote>
+            {% if fontData.designer.quote.en %}
+              <blockquote lang="en">“{{ fontData.designer.quote.en }}”</blockquote>
+            {% endif %}
+            <strong>
+              —{{ fontData.designer.name.ja }}
+              {% if fontData.designer.name.en %}
+                <span lang="en">{{ fontData.designer.name.en }}</span>
+              {% endif %}
+            </strong>、<span>{{ site.data.lang.designer_of.ja }} {{ fontData.name.ja }}</span>
+          </div>
+
+          <div class="mb3">
+            <blockquote class="indent-n1 h1 wf-{{ 'roundedmplus' }}">『{{ site.data.fonts['roundedmplus'].designer.quote.ja }}』</blockquote>
+            {% if site.data.fonts['roundedmplus'].designer.quote.en %}
+              <blockquote lang="en">“{{ site.data.fonts['roundedmplus'].designer.quote.en }}”</blockquote>
+            {% endif %}
+            <strong>
+              —{{ site.data.fonts['roundedmplus'].designer.name.ja }}
+              {% if site.data.fonts['roundedmplus'].designer.name.en %}
+                <span lang="en">{{ site.data.fonts['roundedmplus'].designer.name.en }}</span>
+              {% endif %}
+            </strong>、<span>{{ site.data.lang.designer_of.ja }} {{ site.data.fonts['roundedmplus'].name.ja }}</span>
+          </div>
+
+          {% comment %}
+            Specimen designer credits could be included here, or deferred to the footer.
+          {% endcomment %}
+
+          {% if page.authors %}
+            <div>{{ site.data.lang.design_by.ja }}
+              <ul class="list-style-none p0 m0 inline-block">
+                {% for author in page.authors %}
+                  <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% elsif page.author %}
+            <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
   </div>
 </div>
 

@@ -276,3 +276,17 @@ a,
     height: 16px;
   }
 }
+
+
+// Hanging quotes
+//
+// TODO Ask Mariko if this is good practice.
+// TODO Make quotes pseudo elements?
+//
+// Markup:
+// <blockquote class="indent-n1">『日常的に使うための飽きのこない、それでいてちょっと気になるデザイン。』</blockquote>
+//
+// Styleguide: base.indent
+.indent-n1 {
+  text-indent: -1em;
+}
