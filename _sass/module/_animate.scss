@@ -51,8 +51,10 @@
 
 .animate-ty50 {
   animation: 6s ease-in-out infinite ty50;
+  animation: 6s cubic-bezier(.92,.11,.06,.89) infinite ty50;
 }
 
 .animate-tyn50 {
   animation: 6s ease-in-out infinite tyn50;
+  animation: 6s cubic-bezier(.92,.11,.06,.89) infinite tyn50;
 }
