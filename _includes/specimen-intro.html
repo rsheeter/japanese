@@ -1,0 +1,8 @@
+{% comment %} Current not in use {% endcomment %}
+
+<div class="mx-auto max-width-2 p2 bg-yellow center black rounded">
+  <span>{{ site.data.fonts[page.font].name.ja | default: "Hi" }}</span>
+  {% if site.data.fonts[page.font].name.ja != site.data.fonts[page.font].name.en %}
+    &nbsp;<span class="muted" lang="en">{{ site.data.fonts[page.font].name.en }}</span>
+  {% endif %}
+</div>
