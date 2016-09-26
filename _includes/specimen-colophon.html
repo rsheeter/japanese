@@ -9,7 +9,7 @@
           Type designer quotation and credit
         {% endcomment %}
 
-        <div class="mb3">
+        {% if fontData.designer.quote.ja %}
           <blockquote class="indent-n1 h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
           {% if fontData.designer.quote.en %}
             <blockquote lang="en">{{ fontData.designer.quote.en }}</blockquote>
@@ -20,7 +20,7 @@
               <span lang="en">{{ fontData.designer.name.en }}</span>
             {% endif %}
           </strong>、<span>{{ site.data.lang.designer_of.ja }} {{ fontData.name.ja }}</span>
-        </div>
+        {% endif %}
 
         {% comment %}
           Specimen designer credits could be included here, or deferred to the footer.
