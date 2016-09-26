@@ -142,6 +142,19 @@ a,
   }
 }
 
+.img-nikukyu-ladybug {
+  transform: translate(25px, 50px);
+  @media #{ $breakpoint-sm } {
+    transform: translate(50px, 65px);
+  }
+  @media #{ $breakpoint-md } {
+    transform: translate(50px, 75px);
+  }
+  @media #{ $breakpoint-lg } {
+    transform: translate(50px, 100px);
+  }
+}
+
 // From Utility OpenType
 .caps {
   text-transform: uppercase;
