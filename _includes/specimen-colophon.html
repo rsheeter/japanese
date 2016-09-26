@@ -10,6 +10,7 @@
         {% endcomment %}
 
         {% if fontData.designer.quote.ja %}
+          {% comment %} TODO Fix orphans in Japanese quotes {% endcomment %}
           <blockquote class="indent-n1 h3 sm-h2 md-h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
           {% if fontData.designer.quote.en %}
             <blockquote lang="en" class="h5 sm-h4 line-height-4 md-col-6"><p>{{ fontData.designer.quote.en | widont }}</p></blockquote>
