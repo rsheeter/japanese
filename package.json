@@ -16,6 +16,8 @@
   "scripts": {
     "postinstall": "bundle install; mv ./node_modules/normalize.css/normalize.css ./node_modules/normalize.css/normalize.scss",
     "start": "bundle exec jekyll serve ./src",
-    "build": "bundle exec jekyll build ./src"
+    "build": "bundle exec jekyll build ./src",
+    "prestage": "npm run build",
+    "stage": "gcloud app deploy ./_site/app.yaml --project gf-project-1"
   }
 }
