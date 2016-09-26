@@ -3,7 +3,8 @@ font: hannari
 font_local: true
 ---
 
-<div class="bg-red bg-gradient-red-white white p2 py4">
+<div class="bg-red bg-gradient-red-white white">
+  <div class="p2 py4">
   <div class="mx-auto max-width-3">
     <div class="col-12 h1 wf-hannari">
       <div class="flex flex-wrap">
@@ -42,7 +43,11 @@ font_local: true
       </div>
     </div>
   </div>
-  {% include specimen-colophon.html %}
+  </div>
+  </div>
+  <div class="black">
+    {% include specimen-colophon.html font=page.font %}
+  </div>
 </div>
 
 <!--

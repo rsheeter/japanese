@@ -1,40 +1,59 @@
-{% assign font = site.data.fonts[page.font] %}
-
-<footer class="clearfix bg-lighten-2">
+{% assign fontKey = include.font %}
+{% assign fontData = site.data.fonts[fontKey] %}
+<footer class="clearfix font-family-base">
   <div class="sm-flex">
-    <div class="col-12 sm-col-6 p2">
+    <div class="col-12 sm-col-6 p2 sm-py3 flex items-center">
+      <div class="mx-auto max-width-2">
+
+        {% comment %}
+          Type designer quotation and credit
+        {% endcomment %}
+
+        <div class="mb3">
+          <blockquote class="indent-n1 h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
+          {% if fontData.designer.quote.en %}
+            <blockquote lang="en">{{ fontData.designer.quote.en }}</blockquote>
+          {% endif %}
+          <strong>
+            —{{ fontData.designer.name.ja }}
+            {% if fontData.designer.name.en %}
+              <span lang="en">{{ fontData.designer.name.en }}</span>
+            {% endif %}
+          </strong>、<span>{{ site.data.lang.designer_of.ja }} {{ fontData.name.ja }}</span>
+        </div>
+
+        {% comment %}
+          Specimen designer credits could be included here, or deferred to the footer.
+
+        {% if page.authors %}
+          <div>{{ site.data.lang.design_by.ja }}
+            <ul class="list-style-none p0 m0 inline-block">
+              {% if site.data.authors[page.author].hidden != true %}
+                {% for author in page.authors %}
+                  <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </div>
+        {% elsif page.author and site.data.authors[page.author].hidden != true %}
+          <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
+        {% endif %}
+
+        {% endcomment %}
+
+      </div>
+    </div>
+    <div class="col-12 sm-col-6 p2 sm-p3 bg-darken-2">
       <div class="mx-auto max-width-3">
         <h3>
-          {{ font.name.ja }}
-          {% if font.name.ja != font.name.en %}
-            <span lang="en" class="">{{ font.name.en }}</span>
+          {{ fontData.name.ja }}
+          {% if fontData.name.ja != fontData.name.en %}
+            <span lang="en" class="">{{ fontData.name.en }}</span>
           {% endif %}
         </h3>
         <p>{{ site.data.lang.use_it.ja }}</p>
-        {% include codeblock.html font=page.font %}
+        {% include codeblock.html font=fontKey %}
       </div>
-    </div>
-    <div class="col-12 sm-col-6 p2 bg-lighten-4">
-      <div class="mx-auto max-width-3">
-        <blockquote>『{{ font.designer.quote.ja }}』</blockquote>
-        {% if font.designer.quote.en %}
-          <blockquote lang="en">“{{ font.designer.quote.en }}”</blockquote>
-        {% endif %}
-      </div>
-
-      {% if page.authors %}
-        <div>{{ site.data.lang.design_by.ja }}
-          <ul class="list-style-none p0 m0 inline-block">
-            {% for author in page.authors %}
-              <li class="inline-block"><a href="{{ site.data.authors[author].url | default: '#' }}">{{ site.data.authors[author].name | escape }}</a>{% if forloop.last == true %}{% else %}, {% endif %}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-      {% elsif page.author %}
-        <p>{{ site.data.lang.design_by.ja }} {{ site.data.authors[page.author].name | escape }}</p>
-      {% endif %}
-
     </div>
   </div>
 </footer>

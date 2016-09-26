@@ -14,6 +14,7 @@ font_local: true
       <p class="h1 line-height-4">依然として速度を増しながら進むにつれて、夜と日中の切り替わりが曖昧になり、一続きの灰色になった。空は深い青色で夕暮れ時のような明るい光で照らされている。急に現れる太陽はきらめく円弧の形をした光の筋となった。月はおぼろげに揺らぐ帯となり、星は見えなかった。ただ、時折青い空に明るく瞬く円が見えた。</p>
     </div>
   </div>
+  {% comment %}
   <div class="flex flex-wrap mxn1 md-mxn2">
     <div class="col-6">
       <div class="px1 md-px2">
@@ -26,4 +27,8 @@ font_local: true
       </div>
     </div>
   </div>
+  {% endcomment %}
+</div>
+<div class="clearfix bg-red pb4">
+  {% include specimen-colophon.html value=page.font %}
 </div>

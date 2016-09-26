@@ -3,8 +3,8 @@ font: nicomojiplus
 font_local: true
 ---
 
-<div class="clearfix bg-black">
-  <div class="col-12 olive p2 py4">
+<div class="clearfix bg-black olive">
+  <div class="col-12 p2 py4">
     <img src="/media/illustration-storefront-2-outlined.svg" class="col-12 block" />
     <div class="mx-auto max-width-3 pb2">
       <div class="h1 wf-nicomojiplus overflow-hidden" style="height: 33vh">
@@ -18,5 +18,7 @@ font_local: true
 
     <img src="/media/illustration-storefront-3-outlined.svg" class="col-12 block" />
   </div>
-  {% include specimen-colophon.html %}
+  <div class="bg-olive black">
+    {% include specimen-colophon.html font=page.font %}
+  </div>
 </div>
