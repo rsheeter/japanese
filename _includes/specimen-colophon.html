@@ -2,7 +2,8 @@
 {% assign fontData = site.data.fonts[fontKey] %}
 <footer class="clearfix font-family-base">
   <div class="sm-flex">
-    <div class="col-12 sm-col-6 p2 sm-py3 flex items-center">
+    <div class="col-12 sm-col-6">
+      <div class="p2 sm-py3 flex items-center">
       <div class="mx-auto max-width-2">
 
         {% comment %}
@@ -12,7 +13,7 @@
         {% if fontData.designer.quote.ja %}
           <blockquote class="indent-n1 h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
           {% if fontData.designer.quote.en %}
-            <blockquote lang="en">{{ fontData.designer.quote.en }}</blockquote>
+            <blockquote lang="en">{{ fontData.designer.quote.en | widont }}</blockquote>
           {% endif %}
           <strong>
             —{{ fontData.designer.name.ja }}
@@ -42,10 +43,12 @@
         {% endcomment %}
 
       </div>
+      </div>
     </div>
-    <div class="col-12 sm-col-6 p2 sm-p3 bg-darken-2">
+    <div class="col-12 sm-col-6 bg-darken-2">
+      <div class="p2 sm-p3">
       <div class="mx-auto max-width-3">
-        <h3>
+        <h3 class="mt0">
           {{ fontData.name.ja }}
           {% if fontData.name.ja != fontData.name.en %}
             <span lang="en" class="">{{ fontData.name.en }}</span>
@@ -54,6 +57,7 @@
         <p>{{ site.data.lang.use_it.ja }}</p>
         {% include codeblock.html font=fontKey %}
       </div>
+    </div>
     </div>
   </div>
 </footer>
