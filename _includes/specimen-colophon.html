@@ -2,9 +2,8 @@
 {% assign fontData = site.data.fonts[fontKey] %}
 <footer class="clearfix font-family-base">
   <div class="sm-flex">
-    <div class="col-12 sm-col-6">
-      <div class="p2 sm-py3 flex items-center">
-      <div class="mx-auto max-width-2">
+    <div class="col-12 sm-col-6 flex items-center">
+      <div class="p2 sm-py3 mx-auto max-width-2">
 
         {% comment %}
           Type designer quotation and credit
@@ -43,11 +42,9 @@
         {% endcomment %}
 
       </div>
-      </div>
     </div>
     <div class="col-12 sm-col-6 bg-darken-2">
-      <div class="p2 sm-p3">
-      <div class="mx-auto max-width-3">
+      <div class="p2 sm-p3 mx-auto max-width-3">
         <h3 class="mt0">
           {{ fontData.name.ja }}
           {% if fontData.name.ja != fontData.name.en %}
@@ -56,7 +53,6 @@
         </h3>
         <p>{{ site.data.lang.use_it.ja }}</p>
         {% include codeblock.html font=fontKey %}
-      </div>
     </div>
     </div>
   </div>
