@@ -3,21 +3,25 @@ font: nicomojiplus
 font_local: true
 ---
 
-<div class="clearfix bg-black olive">
-  <div class="col-12 p2 py4">
-    <img src="/media/illustration-storefront-2-outlined.svg" class="col-12 block" />
-    <div class="mx-auto max-width-3 pb2">
-      <div class="h1 wf-nicomojiplus overflow-hidden" style="height: 33vh">
-        <div data-cycle="ニCもじ, カフェでコーヒ, おちゃにしますか?, いらっしゃいませ!"
+<div class="clearfix bg-black olive overflow-hidden">
+  <div class="py2 py4">
+    <div class="mx-auto max-width-4 pb2">
+      <img src="/media/illustration-storefront-2-outlined.svg" class="col-12 block" />
+        <div class="flex items-center px1 center height-nicomojiplus">
+        <div class="h0 line-height-1 mt0 mb2 wf-nicomojiplus mx-auto">
+        <div
+             data-cycle="ニCもじ, カフェでコーヒ, おちゃにしますか?, いらっしゃいませ!"
              data-cycleTimeout="5000">ニCもじ</div>
-      </div>
+        </div>
+        </div>
+      <img src="/media/illustration-storefront-3-outlined.svg" class="col-12 block" />
+
+      {% comment %} TODO Ku-ku (Do-Font) ニコもじ+ {% endcomment %}
+      {% comment %} TODO 『 すこしでもデザインの  てだすけになれれば  さいわいです。』 {% endcomment %}
+
     </div>
-
-    {% comment %} TODO Ku-ku (Do-Font) ニコもじ+ {% endcomment %}
-    {% comment %} TODO 『 すこしでもデザインの  てだすけになれれば  さいわいです。』 {% endcomment %}
-
-    <img src="/media/illustration-storefront-3-outlined.svg" class="col-12 block" />
   </div>
+
   <div class="bg-olive black">
     {% include specimen-colophon.html font=page.font %}
   </div>

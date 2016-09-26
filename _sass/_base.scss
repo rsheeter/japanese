@@ -131,6 +131,16 @@ a,
   font-size: calc( 32px + (48 - 32) * ( (100vw - 400px) / ( 800 - 400) ));
 }
 
+.height-nicomojiplus {
+  height: 100px;
+  @media #{ $breakpoint-sm } {
+    height: 200px;
+  }
+  @media #{ $breakpoint-md } {
+    height: 300px;
+  }
+}
+
 // From Utility OpenType
 .caps {
   text-transform: uppercase;

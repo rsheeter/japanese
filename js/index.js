@@ -37,8 +37,12 @@ if (document) {
       el.textContent = content
 
       if (opts.scale && parent) {
-        bigIdeasText(parent, { baseline: 14, paddingY: 2 })
+        this.scaleText(parent)
       }
+    }
+
+    this.scaleText = function (parent) {
+      bigIdeasText(parent, { minfontsize: 24, maxfontsize: 300 })
     }
 
     this.runCallback = function (el, num, total) {
@@ -74,7 +78,6 @@ if (document) {
   contentCycle(elsCycle, function (el, num, total) {
     var classes = ['olive', 'purple', 'navy', 'red']
 
-    console.log(num, total)
     el.classList.remove(classes[num === 0 ? classes.length - 1 : num - 1])
     el.classList.add(classes[num])
   })
