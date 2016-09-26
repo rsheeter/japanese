@@ -3,15 +3,13 @@ font: sawarabi
 font_local: true
 ---
 
-<div class="bg-black white bg-gradient-black-red">
+<div class="bg-black white ">
 
 
 
   <div class="sm-flex flex-wrap">
-
-    <div class="col-12 sm-col-6 wf-sawarabimincho" style="font-size: 24px; line-height: 2;" id="sawarabimincho">
+    <div class="bg-gradient-black-fuchsia col-12 sm-col-6 wf-sawarabimincho" style="font-size: 24px; line-height: 2;" id="sawarabimincho">
       <!-- <img src="/media/illustration-sawarabi-cloud.svg" alt="Cloud icon from the Sawarabi typeface glyph set." /> -->
-
       <div class="p2 md-py4">
         <div class="mx-auto max-width-2">
           <p class="">どうやらアトモスフェアの高い位置まで到達したようだった。空は真っ暗で、星の瞬きもなくなっていた。丘の上では彼方に広がる水平線が同じ高さに見えるのと同じ錯覚によって、眼下に真っ暗な雲が広がり、車は巨大な暗い空間の真ん中に浮いているように見えた。その空間の上半分は銀色にきらめいていた。</p>
@@ -19,18 +17,36 @@ font_local: true
         </div>
       </div>
     </div>
+    <div class="bg-gradient-black-navy col-12 sm-col-6 wf-sawarabigothic" style="font-size: 24px; line-height: 2;" id="sawarabigothi">
 
-    <div class="bg-gradient-fuchsia-white col-12 sm-col-6 wf-sawarabigothic" style="font-size: 24px; line-height: 2;" id="sawarabigothi">
-
-      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px;">
-         <use xlink:href="#use-circle-1" class="fill-red"></use>
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: translate(400%, 400%) rotate(90deg)">
+         <use xlink:href="#use-circle-1" class="fill-black"></use>
       </svg>
 
-      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: rotate(90deg)">
-         <use xlink:href="#use-circle-1" class="fill-purple"></use>
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: translate(20%, 30%) rotate(0deg)">
+         <use xlink:href="#use-circle-1" class="fill-black"></use>
       </svg>
 
-      <div class="p2 py4 bg-darken-2">
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: translate(100%, 200%) rotate(180deg)">
+         <use xlink:href="#use-circle-1" class="fill-black"></use>
+      </svg>
+
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: translate(100px, 100px) rotate(90deg)">
+         <use xlink:href="#use-circle-1" class="fill-black"></use>
+      </svg>
+
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: translate(300px, 150px) rotate(270deg)">
+         <use xlink:href="#use-circle-1" class="fill-black"></use>
+      </svg>
+
+      {% comment %}
+      <svg viewBox="0 0 120 120" class="absolute" style="width: 120px; transform-origin: center; transform: translate(200px, 200px);">
+         <use xlink:href="#use-circle-3" class="fill-black"></use>
+      </svg>
+      {% endcomment %}
+
+
+      <div class="p2 py4">
 
       <div class="mx-auto max-width-2 relative z3">
         <p class="">依然として速度を増しながら進むにつれて、夜と日中の切り替わりが曖昧になり、一続きの灰色になった。空は深い青色で夕暮れ時のような明るい光で照らされている。急に現れる太陽はきらめく円弧の形をした光の筋となった。月はおぼろげに揺らぐ帯となり、星は見えなかった。ただ、時折青い空に明るく瞬く円が見えた。</p>
@@ -47,7 +63,7 @@ font_local: true
   </div>
 
 </div>
-<div class="clearfix bg-red pb4">
+<div class="clearfix bg-navy">
   {% include specimen-colophon.html font="sawarabimincho" %}
   {% include specimen-colophon.html font="sawarabigothic" %}
 </div>

@@ -16,8 +16,20 @@
   background-image: linear-gradient(to bottom, $fuchsia 0%, $white 100%);
 }
 
+.bg-gradient-fuchsia-black {
+  background-image: linear-gradient(to bottom, $black 0%, $navy 100%);
+}
+
+.bg-gradient-black-fuchsia {
+  background-image: linear-gradient(to bottom, $black 0%, $fuchsia 100%);
+}
+
+.bg-gradient-black-navy {
+  background-image: linear-gradient(to bottom, $black 0%, $navy 100%);
+}
+
 .bg-gradient-aqua-green {
-  background-image: linear-gradient(to bottom, $aqua 75%, $green 100%);  
+  background-image: linear-gradient(to bottom, $aqua 75%, $green 100%);
 }
 
 
