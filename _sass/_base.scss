@@ -142,6 +142,17 @@ a,
   }
 }
 
+.height-kokoro-book {
+  height: 600px;
+}
+
+.height-kokoro-page {
+  height: 300px;
+  @media #{ $breakpoint-md } {
+    height: 600px;
+  }
+}
+
 .img-nikukyu-ladybug {
   &:before {
     content: attr(data-prefix);
