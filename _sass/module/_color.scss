@@ -1,7 +1,7 @@
 // Colors
 
 .bg-gradient-black-red {
-  background-image: linear-gradient(to bottom, $black 75%, $red 95%);
+  background-image: linear-gradient(to bottom, rgba($red, 0) 25%, rgba($red, 1.0) 75%);
 }
 
 .bg-gradient-red-white {
@@ -24,9 +24,38 @@
 }
 
 // SVG fill utility class
+.fill-purple,
+.fill-purple svg { fill: $purple; }
+
 .fill-navy,
 .fill-navy svg { fill: $navy; }
 
+.fill-maroon,
+.fill-maroon svg { fill: $maroon; }
+
+.fill-blue,
+.fill-blue svg { fill: $blue; }
+
+.fill-olive,
+.fill-olive svg { fill: $olive; }
+
+.fill-fuchsia,
+.fill-fuchsia svg { fill: $fuchsia; }
+
+.fill-red,
+.fill-red svg { fill: $red; }
+
+.fill-yellow,
+.fill-yellow svg { fill: $yellow; }
+
+.fill-green,
+.fill-green svg { fill: $green; }
+
+.fill-black,
+.fill-black svg { fill: $black; }
+
+.fill-aqua,
+.fill-aqua svg { fill: $aqua; }
 
 // Selection colours
 // ::selection must be declared individually
