@@ -23,4 +23,5 @@ group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"
   gem "jekyll-browserify", "1.1.1"
   gem "jekyll-autoprefixer"
+  gem "jekyll-typogrify"
 end

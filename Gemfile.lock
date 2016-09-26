@@ -24,6 +24,9 @@ GEM
       browserify_rb (~> 1.0.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
+    jekyll-typogrify (0.3.1)
+      titlecase
+      typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.12.0)
@@ -38,8 +41,12 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rouge (1.11.1)
+    rubypants (0.5.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    titlecase (0.1.1)
+    typogruby (1.0.18)
+      rubypants
 
 PLATFORMS
   ruby
@@ -48,6 +55,7 @@ DEPENDENCIES
   jekyll (= 3.2.1)
   jekyll-autoprefixer
   jekyll-browserify (= 1.1.1)
+  jekyll-typogrify
 
 RUBY VERSION
    ruby 2.0.0p648
