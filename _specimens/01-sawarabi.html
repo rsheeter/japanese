@@ -7,13 +7,13 @@ font_local: true
 
 
 
-  <div class="sm-flex flex-wrap sm-mxn1">
+  <div class="sm-flex flex-wrap">
 
     <div class="col-12 sm-col-6 wf-sawarabimincho" style="font-size: 24px; line-height: 2;" id="sawarabimincho">
       <!-- <img src="/media/illustration-sawarabi-cloud.svg" alt="Cloud icon from the Sawarabi typeface glyph set." /> -->
 
       <div class="p2 md-py4">
-        <div class="mx-auto max-width-2 sm-px1">
+        <div class="mx-auto max-width-2">
           <p class="">どうやらアトモスフェアの高い位置まで到達したようだった。空は真っ暗で、星の瞬きもなくなっていた。丘の上では彼方に広がる水平線が同じ高さに見えるのと同じ錯覚によって、眼下に真っ暗な雲が広がり、車は巨大な暗い空間の真ん中に浮いているように見えた。その空間の上半分は銀色にきらめいていた。</p>
           <div color="wf-sawarabimincho yellow">                </div>
         </div>
@@ -21,16 +21,25 @@ font_local: true
     </div>
 
     <div class="bg-gradient-fuchsia-white col-12 sm-col-6 wf-sawarabigothic" style="font-size: 24px; line-height: 2;" id="sawarabigothi">
-      {% comment %}
-      {% include illustration-sawarabi-circle-1.html fill="red" %}
-      {% include illustration-sawarabi-circle-3.html fill="red" %}
-      {% endcomment %}
+
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px;">
+         <use xlink:href="#use-circle-1" class="fill-red"></use>
+      </svg>
+
+      <svg viewBox="0 0 60 60" class="absolute" style="width: 60px; transform-origin: center; transform: rotate(90deg)">
+         <use xlink:href="#use-circle-1" class="fill-purple"></use>
+      </svg>
 
       <div class="p2 py4 bg-darken-2">
 
-      <div class="mx-auto max-width-2 sm-px1">
+      <div class="mx-auto max-width-2 relative z3">
         <p class="">依然として速度を増しながら進むにつれて、夜と日中の切り替わりが曖昧になり、一続きの灰色になった。空は深い青色で夕暮れ時のような明るい光で照らされている。急に現れる太陽はきらめく円弧の形をした光の筋となった。月はおぼろげに揺らぐ帯となり、星は見えなかった。ただ、時折青い空に明るく瞬く円が見えた。</p>
         <div color="wf-sawarabigothic yellow"></div>
+      </div>
+
+      <div class="hide">
+        {% include illustration-sawarabi-circle-1.html %}
+        {% include illustration-sawarabi-circle-3.html %}
       </div>
 
       </div>
