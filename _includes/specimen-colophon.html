@@ -3,23 +3,24 @@
 <footer class="clearfix font-family-base">
   <div class="sm-flex">
     <div class="col-12 sm-col-6 flex items-center">
-      <div class="p2 sm-py3 mx-auto max-width-2">
+      <div class="p3 mx-auto max-width-2">
 
         {% comment %}
           Type designer quotation and credit
         {% endcomment %}
 
         {% if fontData.designer.quote.ja %}
-          <blockquote class="indent-n1 h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
+          <blockquote class="indent-n1 h3 sm-h2 md-h1 wf-{{ fontKey }}">『{{ fontData.designer.quote.ja }}』</blockquote>
           {% if fontData.designer.quote.en %}
             <blockquote lang="en">{{ fontData.designer.quote.en | widont }}</blockquote>
           {% endif %}
-          <strong>
+          <strong class="block mt2">
             —{{ fontData.designer.name.ja }}
             {% if fontData.designer.name.en %}
               <span lang="en">{{ fontData.designer.name.en }}</span>
             {% endif %}
-          </strong>、<span>{{ site.data.lang.designer_of.ja }} {{ fontData.name.ja }}</span>
+            、<span>{{ site.data.lang.designer_of.ja }} {{ fontData.name.ja }}</span>
+          </strong>
         {% endif %}
 
         {% comment %}
