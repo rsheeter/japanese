@@ -18,6 +18,7 @@
     "start": "bundle exec jekyll serve ./src",
     "build": "bundle exec jekyll build ./src",
     "prestage": "npm run build",
-    "stage": "gcloud app deploy ./_site/app.yaml --project gf-project-1"
+    "stage": "cd ./_site; gcloud app deploy app.yaml --project gf-project-1",
+    "poststage": "cd ../"
   }
 }
