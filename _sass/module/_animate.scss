@@ -58,3 +58,7 @@
   animation: 6s ease-in-out infinite tyn50;
   animation: 6s cubic-bezier(.92,.11,.06,.89) infinite tyn50;
 }
+
+.transition-color {
+  transition: color 0.66s ease-in-out;
+}
