@@ -71,6 +71,22 @@ kokoro:
       ja: 少しほっそりとした、角丸な明朝体です。まろやかで、軽い感じがする文字です。
       en: A slim Mincho face with rounded endings. The characters look smooth and light.
 
+mplus:
+  feature_nav: true
+  name:
+    ja: M+
+    en: M+
+  fallback: sans-serif
+  designer:
+    url: false
+    # Incomplete
+    name:
+      ja: 森下浩司
+      en:
+    quote:
+      ja: 日常的に使うための飽きのこない、それでいてちょっと気になるデザイン。
+      en:
+
 nicomojiplus:
   feature_nav: true
   name:
@@ -147,21 +163,6 @@ harenosora:
       en: I hope people will enjoy using this typeface.
 
 # Incomplete
-
-mplus:
-  feature_nav: true
-  name:
-    ja: M+
-    en: M+
-  fallback: sans-serif
-  designer:
-    url: false
-    name:
-      ja: 森下浩司
-      en:
-    quote:
-      ja: 日常的に使うための飽きのこない、それでいてちょっと気になるデザイン。
-      en:
 
 roundedmplus:
   feature_nav: false
