@@ -129,9 +129,10 @@ sawarabigothic:
     name:
       ja: mishio
       en: mishio
-    quote:
-      ja: 本文用のフォントとして使いやすくなるようにイメージしています。
-      en: Designed and optimised as text type.
+    # Same quote as in Sawarabi Mincho
+    # quote:
+    #   ja: 本文用のフォントとして使いやすくなるようにイメージしています。
+    #   en: Designed and optimised as text type.
 
 notosansjapanese:
   feature_nav: true
