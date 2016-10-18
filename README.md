@@ -1,14 +1,22 @@
-# Early Access type specimen site
+# Google Fonts + 日本語 早期アクセス (Jekyll prototype branch)
 
-<!-- TODO write description based on Omer’s content and then translate. -->
+As Google makes progress on supporting Japanese web typography, we invite designers and developers to experiment with these Japanese web fonts now available from Google Fonts Early Access.
+
+This branch contains an unmaintained prototype version of the site that was built using Jekyll. If you’re looking to contribute to the project, please review [master](https://github.com/googlefonts/japanese/tree/master) and the main [CONTRIBUTING guide](https://github.com/googlefonts/japanese/blob/master/CONTRIBUTING.md).
 
 ## Getting started
 
-To get started, clone this project locally by running the following command in your terminal:
+To run this earlier version of the project, clone this project locally by running the following command in your terminal:
 
 ```sh
-git clone https://github.com/kennethormandy/gf-project-1
-cd gf-project-1
+git clone https://github.com/googlefonts/japanese googlefonts-japanese
+cd googlefonts-japanese
+```
+
+Then, checkout this branch, which contains the Jekyll older version of the site:
+
+```sh
+git checkout jekyll
 ```
 
 Running this static site locally will require a recent, stable version of [Ruby](https://www.ruby-lang.org/en/) and [Node.js](https://nodejs.org) installed. (Neither Ruby or Node.js are used in production, and you don’t really need to know much beyond these instructions to contribute to the site. A preconfigured version of [Jekyll](https://github.com/jekyll/jekyll) is used as the static site generator. This compiles the Sass files to CSS, and injects the metadata into the Liquid templates and compiles them into HTML.
@@ -43,16 +51,34 @@ npm run build
 
 This will compile the default `./_site` directory using Jekyll.
 
-## Staging the site to Appspot
+## Staging the site
 
-<!-- TODO -->
-
-## Deploying the site to production
-
-<!-- TODO
-
-Running the following command will automatically compile the site and publish it to the domain:
+This version of the site was originally setup to be deployed to [Google App Engine](https://cloud.google.com/appengine/). With the App Engine CLI setup, you can publish the site with:
 
 ```sh
-npm run deploy
-``` -->
+npm run stage
+```
+
+…which will build and run the staging command. Alternatively, use a static site host like [Surge.sh](https://surge.sh) or [GitHub Pages](https://pages.github.com/):
+
+```sh
+# Install Surge globally
+npm install -g surge
+
+# Build the site
+npm run build
+
+# Deploy the site
+surge ./build
+```
+
+```sh
+# Install a gh-pages npm module and CLI
+npm install -g gh-pages
+
+# Build the site
+npm run build
+
+# Deploy the site
+gh-pages --dist ./build
+```
